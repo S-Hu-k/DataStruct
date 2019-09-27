@@ -1,0 +1,89 @@
+﻿生成启动时间为 2019/9/27 19:21:11。
+     1>项目“E:\test\test-9-27\test-9-27\test-9-27.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt TestMain.c
+         TestMain.c
+     1>e:\test\test-9-27\test-9-27\seqlist.h(11): error C2016: C 要求一个结构或联合至少有一个成员
+     1>e:\test\test-9-27\test-9-27\seqlist.h(11): error C2061: 语法错误: 标识符“DataType”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(12): error C2061: 语法错误: 标识符“capacity”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(12): error C2059: 语法错误:“;”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(13): error C2061: 语法错误: 标识符“size”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(13): error C2059: 语法错误:“;”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(15): error C2059: 语法错误:“}”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(18): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(18): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(18): error C2059: 语法错误:“类型”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(18): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(19): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(19): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(19): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(19): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(20): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(20): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(20): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(20): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(21): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(21): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(21): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(22): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(22): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(22): error C2059: 语法错误:“类型”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(22): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(24): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(24): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(24): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(25): error C2054: 在“psl”之后应输入“(”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(28): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(28): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(28): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(29): error C2054: 在“psl”之后应输入“(”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(35): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(35): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(35): error C2059: 语法错误:“类型”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(35): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(42): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(42): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(42): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(42): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(43): error C2054: 在“x”之后应输入“(”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(54): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(54): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(54): error C2146: 语法错误: 缺少“;”(在标识符“x”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(54): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(55): error C2054: 在“x”之后应输入“(”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(71): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(71): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(71): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(72): error C2054: 在“psl”之后应输入“(”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(79): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(79): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
+     1>e:\test\test-9-27\test-9-27\seqlist.h(79): error C2059: 语法错误:“)”
+     1>e:\test\test-9-27\test-9-27\seqlist.h(80): error C2054: 在“psl”之后应输入“(”
+     1>e:\test\test-9-27\test-9-27\testmain.c(4): error C2065: “SeqList”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(4): error C2146: 语法错误: 缺少“;”(在标识符“mylist”的前面)
+     1>e:\test\test-9-27\test-9-27\testmain.c(4): error C2065: “mylist”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(5): warning C4013: “SeqListInit”未定义；假设外部返回 int
+     1>e:\test\test-9-27\test-9-27\testmain.c(5): error C2065: “mylist”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(9): error C2146: 语法错误: 缺少“;”(在标识符“item”的前面)
+     1>e:\test\test-9-27\test-9-27\testmain.c(9): error C2065: “item”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(12): warning C4013: “printf”未定义；假设外部返回 int
+     1>e:\test\test-9-27\test-9-27\testmain.c(24): warning C4013: “scanf”未定义；假设外部返回 int
+     1>e:\test\test-9-27\test-9-27\testmain.c(33): error C2065: “item”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(33): warning C4047: “!=”:“int *”与“int”的间接级别不同
+     1>e:\test\test-9-27\test-9-27\testmain.c(35): warning C4013: “SeqListPushBack”未定义；假设外部返回 int
+     1>e:\test\test-9-27\test-9-27\testmain.c(35): error C2065: “mylist”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(35): error C2065: “item”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(40): error C2065: “item”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(40): warning C4047: “!=”:“int *”与“int”的间接级别不同
+     1>e:\test\test-9-27\test-9-27\testmain.c(42): warning C4013: “SeqListPushFront”未定义；假设外部返回 int
+     1>e:\test\test-9-27\test-9-27\testmain.c(42): error C2065: “mylist”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(42): error C2065: “item”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(46): warning C4013: “SeqListShow”未定义；假设外部返回 int
+     1>e:\test\test-9-27\test-9-27\testmain.c(46): error C2065: “mylist”: 未声明的标识符
+     1>e:\test\test-9-27\test-9-27\testmain.c(49): warning C4013: “SeqListLength”未定义；假设外部返回 int
+     1>e:\test\test-9-27\test-9-27\testmain.c(49): error C2065: “mylist”: 未声明的标识符
+     1>已完成生成项目“E:\test\test-9-27\test-9-27\test-9-27.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.20
