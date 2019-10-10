@@ -233,7 +233,6 @@ void SListreverse(SList *plist)
 		p2 = plist->first->next;
 		p3 = p2->next;
 
-
 		plist->last = p2;
 		while (p2 != NULL)
 		{
@@ -241,13 +240,44 @@ void SListreverse(SList *plist)
 			p1 = p2;
 			p2 = p3;
 			if (p3 != NULL)
-				p3 = p3->next;//
+				p3 = p3->next;
 		}
 		plist->first->next = p1;
 
 	}
 }
 
+
+
+//void SListReverse(SList *plist)
+//
+//{
+//
+//	SListNode *p = plist->first->next;
+//
+//	SListNode *q = p->next;
+//
+//	plist->last = p;
+//
+//	plist->last->next = NULL;
+//
+//	p = q;
+//
+//	while (p != NULL)
+//
+//	{
+//
+//		q = p->next;
+//
+//		p->next = plist->first->next;
+//
+//		plist->first->next = p;
+//
+//		p = q;
+//
+//	}
+//
+//}
 //bool SListPushBack(SList *plist, DataType x)
 //{
 //	SListNode *s = _Buynode(x);
