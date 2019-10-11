@@ -21,6 +21,12 @@
     <ClInclude Include="seqlist.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="slist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dlist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestMain.c">

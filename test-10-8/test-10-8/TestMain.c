@@ -2,16 +2,33 @@
 
 
 //#include"slist.h"
-#include"seqlist.h"
+//#include"seqlist.h"
+#include"dlist.h"
 int main()
 {
-	SeqList mylist;
-	SeqListInit(&mylist, SEQLIST_DEFAULT_SIZE);
+	//SeqList mylist;
+	//SeqListInit(&mylist, SEQLIST_DEFAULT_SIZE);
+
+
+	//DList mylist;
+	//DListInit(&mylist, DLIST_DEFAULT_SIZE);
+
+
+	//SList mylist;
+	//SListInit(&mylist);
+
+
+	DList mylist;
+	DListInit(&mylist);
+
+	//SListNode *p;
+	DListNode *p;
+
 	int select = 1;
 	int pos = 0;
 	DataType item;
 	DataType x;
-	DataType n;
+	//DataType n;
 	//DataType x;
 	//int select = 1;
 	////SList mylist;
@@ -29,6 +46,7 @@ int main()
 		printf("**** 12.sort        13.reverse   ****\n");
 		printf("**** 14.length      15.clear     ****\n");
 		printf("**** 16.modify_pos  17.modify_val****\n");
+		printf("**** 18.destroy                  ****\n");
 		printf("*************************************\n");
 		printf("请选择:>");
 		scanf("%d", &select);
@@ -42,76 +60,99 @@ int main()
 			printf("请输入要插入的数据<-1结束>:>");
 			while (scanf("%d", &select), select != -1)
 			{
-				SeqListPushBack(&mylist, select);
+				//SeqListPushBack(&mylist, select);
+				//SListPushBack(&mylist, select);
+			     DListPushBack(&mylist, select);
 			}
 			break;
 		case 2:
 			printf("请输入要插入的数据<-1结束>:>");
 			while (scanf("%d", &item), item != -1)
 			{
-				SeqListPushFront(&mylist, item);
+				//SeqListPushFront(&mylist, item);
+				//SListPushFront(&mylist, item);
+
 			}
 			break;
 		case 3:
-			SeqListShow(&mylist);
+			//SeqListShow(&mylist);
+			//SListShow(&mylist);
+			DListShow(&mylist);
 			break;
-			/*case 4:
-			SeqListPopBack();
+			case 4:
+				//SListPopBack(&mylist);
 			break;
 			case 5:
-			SeqListPopFront();
-			break;*/
+		//	SeqListPopFront();
+				//SListPopFront(&mylist);
+
+			break;
 		case 6:
-			printf("请输入要插入的数据<-1结束>:>");
-			if (scanf("%d%d", &item, &n), item != -1)
-			{
+			//printf("请输入要插入的数据<-1结束>:>");
+			//if (scanf("%d%d", &item, &n), item != -1)
+			//{
 
-				SeqListInsertPos(&mylist, item, n);
-
-			}
+			//	//SeqListInsertPos(&mylist, item, n);
+			//	//SListInsertPos(&mylist, item, n);
+			//}
+			printf("请输入要插入的位置;>");
+				scanf("%d", &pos);
+				printf("请输入要插入的数据;>");
+				scanf("%d", &item);
+				//SListInsertPos(&mylist, pos,item);
 			break;
 		case 7:
-			printf("请输入要插入的数据<-1结束>:>");
-			if (scanf("%d%d", &item, &n), item != -1)
-			{
+			//printf("请输入要插入的数据<-1结束>:>");
+			//if (scanf("%d%d", &item, &n), item != -1)
+			//{
 
-				SeqListInsertVal(&mylist, item, n);
+			//	//SeqListInsertVal(&mylist, item, n);
 
-			}
+			//}
+			printf("请输入要插入的值;>");
+			scanf("%d", &item);
+		//	SListInsertVal(&mylist, item);
 			break;
 		case 8:
 			printf("请输入要删除的位置；>");
 			scanf("%d", &pos);
-			SeqListDeletePos(&mylist, pos);
+			//SeqListDeletePos(&mylist, pos);
+			//SListDeletePos(&mylist, pos);
 			break;
 		case 9:
 			printf("请输入要删除的值:>");
 			scanf("%d", &x);
-			SeqListDeleteVal(&mylist, x);
+			//SeqListDeleteVal(&mylist, x);
+			//SListDeleteVal(&mylist, x);
 			break;
 		case 10:
 			printf("请输入你要找的位置:>");
 			scanf("%d", &pos);
-			SeqListFindPos(&mylist, pos);
+			//SeqListFindPos(&mylist, pos);
 			break;
 		case 11:
 			printf("请输入你要找的值:>");
 			scanf("%d", &x);
-			SeqListFindVal(&mylist,x );
+			//SeqListFindVal(&mylist,x );
 			break;
 		case 12:
 			//排序
-			printf("%d\n", SeqListsort(&mylist));
+			//printf("%d\n", SeqListsort(&mylist));
+		//SListSort(&mylist);
 			break;
 		case 13:
 			// 逆转
-			printf("%d\n", SeqListreverse(&mylist));
+			//printf("%d\n", SeqListreverse(&mylist));
+			//SListreverse(&mylist);
 			break;
 		case 14:
-			printf("SeqList Length=%d\n", SeqListLength(&mylist));
+			//printf("SeqList Length=%d\n", SeqListLength(&mylist));
+			//printf("SList Length=%d\n", SListLength(&mylist));
+
 			break;
 		case 15:
-			SeqListClear(&mylist, item);
+			//SeqListClear(&mylist, item);
+			//SListClear(&mylist);
 			break;
 		case 16:
 			/*SeqListModifyPos(&mylist, item);*/
@@ -119,13 +160,16 @@ int main()
 			printf("请输入要修改的位置:>\n");
 			printf("请输入要修改的值:>\n");
 			scanf("%d%d", &pos, &item);
-			SeqListModifyPos(&mylist, pos, item);
+			//SeqListModifyPos(&mylist, pos, item);
 			break;
 		case 17:
 			printf("请输入要改的值:>\n");
 			printf("请输入改后的值;>\n");
 			scanf("%d %d", &item, &x);
-			SeqListModifyVal(&mylist, item, x);
+			//SeqListModifyVal(&mylist, item, x);
+			break;
+		case 18:
+			//SListDestroy(&mylist);
 			break;
 		default:
 			printf("输入错误，请重新输入....\n");
