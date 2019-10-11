@@ -71,6 +71,7 @@ int main()
 			{
 				//SeqListPushFront(&mylist, item);
 				//SListPushFront(&mylist, item);
+				DListPushFront(&mylist, item);
 
 			}
 			break;

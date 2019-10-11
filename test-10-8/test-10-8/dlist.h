@@ -30,13 +30,14 @@ DListNode* _Buynode(DataType x)
 void DListInit(DList *plist);
 void DListShow(DList *plist);
 bool DListPushBack(DList *plist, DataType x);
+bool DListPushFront(DList *plist, DataType x);
 
 
 /////////////////////////////////////////////
 void DListInit(DList *plist)
 {
 	DListNode *s = _Buynode(0);
-	plist->first = plist->last;
+	plist->first = plist->last=s;
 	plist->size = 0;
 
 }
@@ -53,7 +54,7 @@ void DListShow(DList *plist)
 }
 bool DListPushBack(DList *plist, DataType x)
 {
-	DListNode* s = _Buynode(x);
+	DListNode *s = _Buynode(x);
 	if (s == NULL)
 		return false;
 
@@ -61,6 +62,28 @@ bool DListPushBack(DList *plist, DataType x)
 	s->prev = plist->last;
 	plist->last = s;
 
+
+	plist->size++;
+	return true;
+}
+bool DListPushFront(DList *plist, DataType x)
+{
+	DListNode *s = _Buynode(x);
+	if (s == NULL)
+		return false;
+
+	/*plist->first->next = s;
+	s->next=plist->last;
+	s->prev = plist->first;
+	plist->last->prev = s;*/
+	s->next = plist->first->next;
+	if (s->next != NULL)
+		s->next->prev = s;
+	s->prev = plist->first;
+	s->prev->next = s;
+
+	if (plist->size == 0)
+		plist->last = s;
 
 	plist->size++;
 	return true;
