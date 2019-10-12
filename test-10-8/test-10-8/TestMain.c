@@ -125,6 +125,8 @@ int main()
 			scanf("%d", &x);
 			//SeqListDeleteVal(&mylist, x);
 			//SListDeleteVal(&mylist, x);
+			DListDeleteVal(&mylist, x);
+
 			break;
 		case 10:
 			printf("请输入你要找的位置:>");
@@ -135,6 +137,7 @@ int main()
 			printf("请输入你要找的值:>");
 			scanf("%d", &x);
 			//SeqListFindVal(&mylist,x );
+			DListFindVal(&mylist, x);
 			break;
 		case 12:
 			//排序

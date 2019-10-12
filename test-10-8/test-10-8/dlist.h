@@ -31,6 +31,7 @@ void DListInit(DList *plist);
 void DListShow(DList *plist);
 bool DListPushBack(DList *plist, DataType x);
 bool DListPushFront(DList *plist, DataType x);
+bool DListDeleteVal(DList *plist, DataType x);
 
 
 /////////////////////////////////////////////
@@ -73,7 +74,7 @@ bool DListPushFront(DList *plist, DataType x)
 		return false;
 
 	/*plist->first->next = s;
-	s->next=plist->last;
+	s->next=plist->first->next;
 	s->prev = plist->first;
 	plist->last->prev = s;*/
 	s->next = plist->first->next;
@@ -87,6 +88,23 @@ bool DListPushFront(DList *plist, DataType x)
 
 	plist->size++;
 	return true;
+}
+bool DListDeleteVal(DList *plist, DataType x)
+{
+	if (plist->size == 0)
+		printf("ÄÚÈİÎª¿Õ£¬É¾³ıÊ§°Ü\n");
+
+	DListNode *p;
+
+	
+}
+
+DListFindVal(DList *plist, DataType x)
+{
+	DListNode* p = plist->first->next;
+	while (p != NULL&&p->data != x)
+		p = p->next;
+	return p;
 }
 
 #endif
