@@ -132,6 +132,7 @@ int main()
 			printf("请输入你要找的位置:>");
 			scanf("%d", &pos);
 			//SeqListFindPos(&mylist, pos);
+			//DListFindPos(&mylist, pos);
 			break;
 		case 11:
 			printf("请输入你要找的值:>");
