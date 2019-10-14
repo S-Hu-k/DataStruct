@@ -242,11 +242,13 @@ void SListreverse(SList *plist)
 			p1 = p2;
 			p2 = p3;
 			if (p3 != NULL)
-				p3 = p3->next;//
+				p3 = p3->next;
 		}
 		plist->first->next = p1;
 
 	}
+	
+	
 }
 
 //bool SListPushBack(SList *plist, DataType x)

@@ -82,11 +82,12 @@ int main()
 			break;
 			case 4:
 				//SListPopBack(&mylist);
+				DListPopBack(&mylist);
 			break;
 			case 5:
-		//	SeqListPopFront();
+		         //	SeqListPopFront();
 				//SListPopFront(&mylist);
-
+				DListPopFront(&mylist);
 			break;
 		case 6:
 			//printf("请输入要插入的数据<-1结束>:>");
@@ -144,20 +145,23 @@ int main()
 			//排序
 			//printf("%d\n", SeqListsort(&mylist));
 		//SListSort(&mylist);
+			DListSort(&mylist);
 			break;
 		case 13:
 			// 逆转
 			//printf("%d\n", SeqListreverse(&mylist));
 			//SListreverse(&mylist);
+			DListreverse(&mylist);
 			break;
 		case 14:
 			//printf("SeqList Length=%d\n", SeqListLength(&mylist));
 			//printf("SList Length=%d\n", SListLength(&mylist));
-
+			printf("DList Length=%d\n", DListLength(&mylist));
 			break;
 		case 15:
 			//SeqListClear(&mylist, item);
 			//SListClear(&mylist);
+			DListClear(&mylist);
 			break;
 		case 16:
 			/*SeqListModifyPos(&mylist, item);*/
