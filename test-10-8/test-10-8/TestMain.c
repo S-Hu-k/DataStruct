@@ -145,6 +145,7 @@ int main()
 			scanf("%d", &x);
 			//SeqListFindVal(&mylist,x );
 			//DListFindVal(&mylist, x);
+			DCListFindVal(&mylist, x);
 			break;
 		case 12:
 			//≈≈–Ú
@@ -162,11 +163,13 @@ int main()
 			//printf("SeqList Length=%d\n", SeqListLength(&mylist));
 			//printf("SList Length=%d\n", SListLength(&mylist));
 			//printf("DList Length=%d\n", DListLength(&mylist));
+			printf("DCList Length=%d\n", DCListLength(&mylist));
 			break;
 		case 15:
 			//SeqListClear(&mylist, item);
 			//SListClear(&mylist);
 			//DListClear(&mylist);
+			DCListClear(&mylist);
 			break;
 		case 16:
 			/*SeqListModifyPos(&mylist, item);*/
@@ -184,6 +187,7 @@ int main()
 			break;
 		case 18:
 			//SListDestroy(&mylist);
+			DCListDestroy(&mylist);
 			break;
 		default:
 			printf(" ‰»Î¥ÌŒÛ£¨«Î÷ÿ–¬ ‰»Î....\n");
