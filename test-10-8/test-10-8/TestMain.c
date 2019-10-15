@@ -3,12 +3,12 @@
 
 //#include"slist.h"
 //#include"seqlist.h"
-#include"dlist.h"
+//#include"dlist.h"
+#include"dclist.h"
 int main()
 {
 	//SeqList mylist;
 	//SeqListInit(&mylist, SEQLIST_DEFAULT_SIZE);
-
 
 	//DList mylist;
 	//DListInit(&mylist, DLIST_DEFAULT_SIZE);
@@ -18,11 +18,14 @@ int main()
 	//SListInit(&mylist);
 
 
-	DList mylist;
-	DListInit(&mylist);
+	//DList mylist;
+	//DListInit(&mylist);
+	DCList mylist;
+	DCListInit(&mylist);
 
 	//SListNode *p;
-	DListNode *p;
+	//DListNode *p;
+	DCListNode *p;
 
 	int select = 1;
 	int pos = 0;
@@ -62,7 +65,8 @@ int main()
 			{
 				//SeqListPushBack(&mylist, select);
 				//SListPushBack(&mylist, select);
-			     DListPushBack(&mylist, select);
+			    // DListPushBack(&mylist, select);
+				DCListPushBack(&mylist, select);
 			}
 			break;
 		case 2:
@@ -71,23 +75,24 @@ int main()
 			{
 				//SeqListPushFront(&mylist, item);
 				//SListPushFront(&mylist, item);
-				DListPushFront(&mylist, item);
-
+				//DListPushFront(&mylist, item);
+				DCListPushFront(&mylist, item);
 			}
 			break;
 		case 3:
 			//SeqListShow(&mylist);
 			//SListShow(&mylist);
-			DListShow(&mylist);
+			//DListShow(&mylist);
+			DCListShow(&mylist);
 			break;
 			case 4:
 				//SListPopBack(&mylist);
-				DListPopBack(&mylist);
+				//DListPopBack(&mylist);
 			break;
 			case 5:
 		         //	SeqListPopFront();
 				//SListPopFront(&mylist);
-				DListPopFront(&mylist);
+				//DListPopFront(&mylist);
 			break;
 		case 6:
 			//printf("请输入要插入的数据<-1结束>:>");
@@ -126,7 +131,7 @@ int main()
 			scanf("%d", &x);
 			//SeqListDeleteVal(&mylist, x);
 			//SListDeleteVal(&mylist, x);
-			DListDeleteVal(&mylist, x);
+			//DListDeleteVal(&mylist, x);
 
 			break;
 		case 10:
@@ -139,29 +144,29 @@ int main()
 			printf("请输入你要找的值:>");
 			scanf("%d", &x);
 			//SeqListFindVal(&mylist,x );
-			DListFindVal(&mylist, x);
+			//DListFindVal(&mylist, x);
 			break;
 		case 12:
 			//排序
 			//printf("%d\n", SeqListsort(&mylist));
 		//SListSort(&mylist);
-			DListSort(&mylist);
+			//DListSort(&mylist);
 			break;
 		case 13:
 			// 逆转
 			//printf("%d\n", SeqListreverse(&mylist));
 			//SListreverse(&mylist);
-			DListreverse(&mylist);
+			//DListreverse(&mylist);
 			break;
 		case 14:
 			//printf("SeqList Length=%d\n", SeqListLength(&mylist));
 			//printf("SList Length=%d\n", SListLength(&mylist));
-			printf("DList Length=%d\n", DListLength(&mylist));
+			//printf("DList Length=%d\n", DListLength(&mylist));
 			break;
 		case 15:
 			//SeqListClear(&mylist, item);
 			//SListClear(&mylist);
-			DListClear(&mylist);
+			//DListClear(&mylist);
 			break;
 		case 16:
 			/*SeqListModifyPos(&mylist, item);*/
