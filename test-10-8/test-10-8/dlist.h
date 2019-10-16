@@ -172,7 +172,7 @@ void DListClear(DList *plist)
 	plist->first=plist->last;
 	plist->size = 0;
 	
-	return true;
+	
 }
 
 void DListreverse(DList *plist)
