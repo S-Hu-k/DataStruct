@@ -63,31 +63,45 @@
 #include<stdlib.h>
 #include<assert.h>
 #include<string.h>
-int my_change(char *arr1,char *arr2)
-{	
-	while (*arr1)	
-	{		
-		if (*arr1 != ' ')
-
-		{		
-			*arr2 = *arr1;		
-			arr2++;	
-		}		
-		else		
-		{		
-			strcpy(arr2, "%20");	
-			arr2 = arr2 + 3;		
-		}		
-		arr1++;	
-	}	
-	*arr2 = '\0';	
-	return 0;
-}
+//int my_change(char *arr1,char *arr2)
+//{	
+//	while (*arr1)	
+//	{		
+//		if (*arr1 != ' ')
+//
+//		{		
+//			*arr2 = *arr1;		
+//			arr2++;	
+//		}		
+//		else		
+//		{		
+//			strcpy(arr2, "%20");	
+//			arr2 = arr2 + 3;		
+//		}		
+//		arr1++;	
+//	}	
+//	*arr2 = '\0';	
+//	return 0;
+//}
+//int main()
+//{	
+//	char arr1[] = "we are happy.";
+//	char arr2[40];	
+//	my_change(arr1,arr2);
+//	printf("%s", arr2);
+//	return 0;
+//}
 int main()
-{	
-	char arr1[] = "we are happy.";
-	char arr2[40];	
-	my_change(arr1,arr2);
-	printf("%s", arr2);
+{
+	int input = 0;
+	int sum = 0;
+	printf("请输入要操作的数:>");
+	scanf("%d", &input);
+	while (input % 10)
+	{
+		sum += input % 10;
+		input /= 10;
+	}
+	printf("sum = %d\n", sum);
 	return 0;
 }
