@@ -149,46 +149,129 @@
 //	return 0;
 //}
 ///////////////////////////////////////////////
+//int main()
+//{
+//
+//double a, b, c, x1, x2, d1, y1, y2, e, f, z;
+//scanf("%lf%lf%lf", &a, &b, &c);
+//if (b*b>4 * a*c&&a != 0 && b != 0 && c != 0)
+//{
+//	x1 = (-b + sqrt(b*b - 4 * a*c)) / (2 * a);
+//	x2 = (-b - sqrt(b*b - 4 * a*c)) / (2 * a);
+//	printf("%.2lf\n%.2lf\n", x1, x2);
+//}
+//else if (b*b == 4 * a*c&&a != 0)
+//{
+//
+//	printf("%.2lf", -b / (2 * a));
+//}
+//else if (a == 0 && b != 0)
+//{
+//	d1 = -c / b;
+//	printf("%.2lf", d1);
+//}
+//else if (b*b<4 * a*c&&b != 0)
+//{
+//	e = -b / (2 * a);
+//	f = sqrt(4 * a*c - b*b) / (2 * a);
+//	printf("%.2lf+%.2lfi\n%.2lf-%.2lfi\n", e, f, e, f);
+//}
+//else if (b*b<4 * a*c&&b == 0)
+//{
+//	e = 0.00;
+//	f = sqrt(4 * a*c - b*b) / (2 * a);
+//	printf("%.2lf+%.2lfi\n%.2lf-%.2lfi\n", e, f, e, f);
+//}
+//else if (a == 0 && b == 0 && c == 0)
+//{
+//	printf("Zero Equation");
+//}
+//else if (a == 0 && b == 0 && c != 0)
+//{
+//	printf("Not An Equation");
+//}
+//return 0;
+//}
+
+////////////////////////////////////////
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h> 
+typedef int ElemType;
+typedef struct Node 
+{   
+	ElemType data;   
+	struct Node *next;
+} Node, *LinkStack; //初始化栈
+LinkStack initStack(LinkStack s); 
+//入栈
+bool pushStack(LinkStack s, ElemType e);//出栈
+Node* popStack(LinkStack s); //打印栈
+void printStack(LinkStack s); //判空
+bool isEmptyStack(LinkStack s); //获取栈元素个数
+int getLength(LinkStack s); //初始化栈
+LinkStack initStack(LinkStack s) 
+{   
+	s = (LinkStack) malloc(sizeof(Node)); 
+	s->next = NULL;    return s;
+} //入栈
+bool pushStack(LinkStack s, ElemType e)
+{    
+	Node *p = (LinkStack) malloc(sizeof(Node));  
+	if(!p) return false;   
+	p->data = e;  
+	p->next = s->next;  
+	s->next = p;   
+	return true;
+} //出栈
+Node* popStack(LinkStack s) 
+{    
+	Node *p = s->next;  
+	if(p!=NULL) 
+	{      
+		s->next = p->next;   
+	}    
+	return p;
+} //打印栈
+void printStack(LinkStack s)
+{  
+	Node *p = s->next;
+	while(p!=NULL) 
+	{       
+		printf("stack elem: %d\n",p->data); 
+		p = p->next;  
+	}
+} //判空
+bool isEmptyStack(LinkStack s)
+{    
+	if( !s || s->next == NULL) 
+		return true;    
+	return false;
+} //获取栈元素个数
+int getLength(LinkStack s)
+{    
+	Node *p = s->next;  
+int i= 0;    while(p!=NULL)
+{    
+
+	i++;    
+	p=p->next;   
+}   
+return i;
+} 
 int main()
 {
-
-double a, b, c, x1, x2, d1, y1, y2, e, f, z;
-scanf("%lf%lf%lf", &a, &b, &c);
-if (b*b>4 * a*c&&a != 0 && b != 0 && c != 0)
-{
-	x1 = (-b + sqrt(b*b - 4 * a*c)) / (2 * a);
-	x2 = (-b - sqrt(b*b - 4 * a*c)) / (2 * a);
-	printf("%.2lf\n%.2lf\n", x1, x2);
-}
-else if (b*b == 4 * a*c&&a != 0)
-{
-
-	printf("%.2lf", -b / (2 * a));
-}
-else if (a == 0 && b != 0)
-{
-	d1 = -c / b;
-	printf("%.2lf", d1);
-}
-else if (b*b<4 * a*c&&b != 0)
-{
-	e = -b / (2 * a);
-	f = sqrt(4 * a*c - b*b) / (2 * a);
-	printf("%.2lf+%.2lfi\n%.2lf-%.2lfi\n", e, f, e, f);
-}
-else if (b*b<4 * a*c&&b == 0)
-{
-	e = 0.00;
-	f = sqrt(4 * a*c - b*b) / (2 * a);
-	printf("%.2lf+%.2lfi\n%.2lf-%.2lfi\n", e, f, e, f);
-}
-else if (a == 0 && b == 0 && c == 0)
-{
-	printf("Zero Equation");
-}
-else if (a == 0 && b == 0 && c != 0)
-{
-	printf("Not An Equation");
-}
-return 0;
+	LinkStack S=0;
+	 S = initStack(S); 
+	pushStack(S,1);   
+	pushStack(S,2);   
+	pushStack(S,3);   
+	pushStack(S,4);  
+	printStack(S);  
+	printf("pop elem is %d\n",popStack(S)->data);  
+	printf("pop elem is %d\n",popStack(S)->data);  
+	printf("pop elem is %d\n",popStack(S)->data);  
+	printf("pop elem is %d\n",popStack(S)->data);   
+	printf("stack length %d\n",getLength(S));
+	return 0;
 }
