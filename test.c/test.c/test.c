@@ -63,6 +63,7 @@
 #include<stdlib.h>
 #include<assert.h>
 #include<string.h>
+#include<math.h>
 //int my_change(char *arr1,char *arr2)
 //{	
 //	while (*arr1)	
@@ -91,17 +92,103 @@
 //	printf("%s", arr2);
 //	return 0;
 //}
+//int main()
+//{
+//	int input = 0;
+//	int sum = 0;
+//	printf("请输入要操作的数:>");
+//	scanf("%d", &input);
+//	while (input % 10)
+//	{
+//		sum += input % 10;
+//		input /= 10;
+//	}
+//	printf("sum = %d\n", sum);
+//	return 0;
+//}
+//int main()
+//{
+//	char i = 0;
+//	double a, b, c;
+//	scanf("%1f%1f%1f", &a, &b, &c);
+//	double d, de1, ans1, ans2;
+//	d = b*b - 4.0*a*c;
+//	if (a == b&&a == 0 && c != 0)
+//		printf("not an equation\n");
+//	else if (d == 0)
+//	{
+//		ans1 = (-b) / (2.0*a);
+//		printf("&.2f\n", ans1);
+//	}
+//	else if (a==0)
+//		printf("&.2f\n", (-c) / b);
+//	else if (d > 0)
+//	{
+//		de1 = sqrt(d);
+//		ans1 = (-b + de1) / (2.0*a);
+//	}
+//	else if (a == 0)
+//		printf("&.2f\n", (-c) / b);
+//	else if (d > 0)
+//	{
+//		de1 = sqrt(d);
+//		ans1 = (-b + de1) / (2.0*a);
+//		ans2 = (-b + de1) / (2.0*a);
+//		printf("%.2f\n%.2f\n", ans1, ans2);
+//	}
+//	else if (d < 0)
+//	{
+//		de1 = sqrt(-d);
+//		if (b != 0)
+//			ans1 = (-b + de1) / (2.0*a);
+//		else
+//			ans1 = 0;
+//		ans2 = de1 / (2.0*a);
+//		printf("%.2f+%.2fi\n,%.2f-%.2fi\n", (ans1 + ans2(i)) ,(ans1 - ans2 i));
+//	}
+//	return 0;
+//}
+///////////////////////////////////////////////
 int main()
 {
-	int input = 0;
-	int sum = 0;
-	printf("请输入要操作的数:>");
-	scanf("%d", &input);
-	while (input % 10)
-	{
-		sum += input % 10;
-		input /= 10;
-	}
-	printf("sum = %d\n", sum);
-	return 0;
+
+double a, b, c, x1, x2, d1, y1, y2, e, f, z;
+scanf("%lf%lf%lf", &a, &b, &c);
+if (b*b>4 * a*c&&a != 0 && b != 0 && c != 0)
+{
+	x1 = (-b + sqrt(b*b - 4 * a*c)) / (2 * a);
+	x2 = (-b - sqrt(b*b - 4 * a*c)) / (2 * a);
+	printf("%.2lf\n%.2lf\n", x1, x2);
+}
+else if (b*b == 4 * a*c&&a != 0)
+{
+
+	printf("%.2lf", -b / (2 * a));
+}
+else if (a == 0 && b != 0)
+{
+	d1 = -c / b;
+	printf("%.2lf", d1);
+}
+else if (b*b<4 * a*c&&b != 0)
+{
+	e = -b / (2 * a);
+	f = sqrt(4 * a*c - b*b) / (2 * a);
+	printf("%.2lf+%.2lfi\n%.2lf-%.2lfi\n", e, f, e, f);
+}
+else if (b*b<4 * a*c&&b == 0)
+{
+	e = 0.00;
+	f = sqrt(4 * a*c - b*b) / (2 * a);
+	printf("%.2lf+%.2lfi\n%.2lf-%.2lfi\n", e, f, e, f);
+}
+else if (a == 0 && b == 0 && c == 0)
+{
+	printf("Zero Equation");
+}
+else if (a == 0 && b == 0 && c != 0)
+{
+	printf("Not An Equation");
+}
+return 0;
 }
