@@ -2,10 +2,35 @@
 
 
 //#include"slist.h"
-//#include"seqlist.h"
+#include"seqlist.h"
 //#include"dlist.h"
-#include"dclist.h"
+//#include"dclist.h"
+#include"stack.h"
 int main()
+{
+	SeqStack st;
+	SeqStackInit(&st, STACK_DEFAULT_SIZE);
+	//SeqStack *pst=SeqStackInit_1(STACK_DEFAULT_SIZE);
+	SeqStackPushBack(&st, 1);
+	SeqStackPushBack(&st, 2);
+	SeqStackPushBack(&st, 3);
+	SeqStackPushBack(&st, 4);
+	SeqStackPushBack(&st, 5);
+	SeqStackPushBack(&st, 6);
+	SeqStackPushBack(&st, 7);
+	SeqStackPushBack(&st, 8);
+	SeqStackPushBack(&st, 10);
+
+	int val = SeqStackTop(&st);
+
+	SeqStackPop(&st);
+	SeqStackPushBack(&st, 9);
+
+	SeqStackShow(&st);
+	return 0;
+}
+
+/*int main()
 {
 	//SeqList mylist;
 	//SeqListInit(&mylist, SEQLIST_DEFAULT_SIZE);
@@ -173,28 +198,28 @@ int main()
 			break;
 		case 16:
 			/*SeqListModifyPos(&mylist, item);*/
-
-			printf("请输入要修改的位置:>\n");
-			printf("请输入要修改的值:>\n");
-			scanf("%d%d", &pos, &item);
-			//SeqListModifyPos(&mylist, pos, item);
-			break;
-		case 17:
-			printf("请输入要改的值:>\n");
-			printf("请输入改后的值;>\n");
-			scanf("%d %d", &item, &x);
-			//SeqListModifyVal(&mylist, item, x);
-			break;
-		case 18:
-			//SListDestroy(&mylist);
-			DCListDestroy(&mylist);
-			break;
-		default:
-			printf("输入错误，请重新输入....\n");
-			break;
-		}
-		system("pause");
-	}
-
-	return 0;
-}
+//
+//			printf("请输入要修改的位置:>\n");
+//			printf("请输入要修改的值:>\n");
+//			scanf("%d%d", &pos, &item);
+//			//SeqListModifyPos(&mylist, pos, item);
+//			break;
+//		case 17:
+//			printf("请输入要改的值:>\n");
+//			printf("请输入改后的值;>\n");
+//			scanf("%d %d", &item, &x);
+//			//SeqListModifyVal(&mylist, item, x);
+//			break;
+//		case 18:
+//			//SListDestroy(&mylist);
+//			DCListDestroy(&mylist);
+//			break;
+//		default:
+//			printf("输入错误，请重新输入....\n");
+//			break;
+//		}
+//		system("pause");
+//	}
+//	
+//	return 0;
+//}*/
