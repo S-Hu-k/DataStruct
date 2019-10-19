@@ -10,7 +10,7 @@ typedef struct SeqStack
 	int top;
 }SeqStack;
 
-
+//Ë³ÐòÕ»
 void SeqStackInit(SeqStack *pst, int sz);
 SeqStack*  SeqStackInit_1(int sz);
 BOOL SeqStackFull(SeqStack *pst);
@@ -85,6 +85,60 @@ void SeqStackShow(SeqStack *pst)
 	for (int i = pst->top - 1; i >= 0; --i)
 
 		printf("%d\n", pst->base[i]);
+}
+
+//Á´Õ»
+typedef struct StackNode
+{
+	DataType data;
+	struct StackNode *next;
+}StackNode;
+typedef StackNode *ListStack;
+
+void ListStackInit(ListStack*pst);
+bool ListStackPush(ListStack*pst,DataType x);
+DataType ListStackTop(ListStack*pst);
+void ListStackShow(ListStack*pst);
+void ListStackPop(ListStack *pst);
+
+
+///////////////////////////////////////////
+void ListStackInit(ListStack*pst)
+{
+	*pst = NULL;
+}
+bool ListStackPush(ListStack*pst, DataType x)
+{
+	ListStack *node = (ListStack*)malloc(sizeof(StackNode));
+	assert(node != NULL);
+	node->data = x;
+	node->next = *pst;
+	*pst = node;
+}
+
+DataType ListStackTop(ListStack*pst)
+{
+	assert(*pst != NULL);
+	return (*pst)->data;
+}
+
+
+
+void ListStackPop(ListStack *pst)
+{
+	StackNode *p = *pst;
+	*pst = p->next;
+	free(p);
+}
+
+void ListStackShow(ListStack pst)
+{
+	StackNode *p = pst;
+	while (p != NULL)
+	{
+		printf("%d\n", p->data);
+		p = p->next;
+	}
 }
 
 

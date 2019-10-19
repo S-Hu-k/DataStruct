@@ -8,6 +8,20 @@
 #include"stack.h"
 int main()
 {
+	ListStack st;
+	ListStackInit(&st);
+	ListStackPush(&st, 1);
+	ListStackPush(&st, 2);
+	ListStackPush(&st, 3);
+	ListStackPush(&st, 4);
+	ListStackPush(&st, 5);
+
+	ListStackShow(st);
+	return 0;
+}
+/*
+int main()
+{
 	SeqStack st;
 	SeqStackInit(&st, STACK_DEFAULT_SIZE);
 	//SeqStack *pst=SeqStackInit_1(STACK_DEFAULT_SIZE);
