@@ -212,9 +212,7 @@ void LinkQueueEn(LinkQueue *Q, DataType x)
 		Q->tail = s;
 	}
 }
-
 void LinkQueueShow(LinkQueue *Q)
-
 {
 	LinkQueueNode *p = Q->front;
 	while (p != NULL)
