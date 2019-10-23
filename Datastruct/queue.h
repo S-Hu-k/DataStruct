@@ -2,9 +2,78 @@
 #define _QUEUE_H_
 #include"common.h"
 
-#define DEFAULT_QUEUE_SIZE 8
-//顺序队列
+#define DEFAULT_QUEUE_SIZE 5
 
+typedef struct  SeqQueue
+{
+	DataType *base;
+	int front;
+	int tail;
+	size_t capacity;
+}SeqQueue;
+bool  SeqQueueFull(SeqQueue *Q)
+{return Q->tail >= Q->capacity;}
+bool  SeqQueueEmpty(SeqQueue *Q)
+{return Q->front == Q->tail;}
+void SeqQueueInit(SeqQueue *Q, int sz);
+void SeqQueueShow(SeqQueue *Q);
+void SeqQueueEn(SeqQueue *Q, DataType x);
+void SeqQueueDe(SeqQueue *Q);
+DataType SeqQueueFront(SeqQueue *Q);
+void SeqQueueDestroy(SeqQueue *Q);
+
+
+/////////////////////////////////////////////////
+
+void SeqQueueInit(SeqQueue *Q, int sz)
+{
+   Q->capacity = sz > DEFAULT_QUEUE_SIZE ? sz : DEFAULT_QUEUE_SIZE;
+   Q ->base = (DataType *)malloc(sizeof(DataType)*Q->capacity);
+   Q->front = Q->tail = 0;
+}
+void SeqQueueEn(SeqQueue *Q, DataType x)
+{
+	if (SeqQueueFull(Q))
+	{
+		printf("队列已满，%d不能入队.\n",x);
+		return;
+	}
+	Q->base[Q->tail++] = x;
+}
+void SeqQueueShow(SeqQueue *Q)
+{
+	for (int i = Q->front; i < Q->capacity; ++i)
+	{
+		printf("%d ", Q->base[i]);
+	}
+	printf("\n");
+}
+void SeqQueueDe(SeqQueue *Q)
+{
+	if (SeqQueueEmpty(Q))
+	{
+		printf("队列已空，不能出对");
+		return;
+	}
+	Q->front++;
+}
+DataType SeqQueueFront(SeqQueue *Q)
+{
+	if (SeqQueueEmpty(Q))
+	{
+		printf("队列已空，不能取出对头元素");
+		return;
+	}
+	return Q->base[Q->front];
+}
+void SeqQueueDestroy(SeqQueue *Q)
+{
+	free(Q->base);
+	Q->base = NULL;
+	Q->capacity = Q->front = Q->tail = 0;
+}
+//顺序队列
+/*
 typedef struct SeqQueue
 {
 	DataType *base;
@@ -258,4 +327,5 @@ void LinkQueueDestroy(LinkQueue *Q)
 	}
 	Q->front = Q->tail = NULL;
 }
+*/
 #endif /* _QUEUE_H_ */

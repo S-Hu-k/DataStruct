@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+//#define _CRT_SECURE_NO_WARNINGS 1
 
 
 //#include"slist.h"
@@ -62,11 +62,13 @@ int main()
 {
 SeqQueue Q;//
 SeqQueueInit(&Q, DEFAULT_QUEUE_SIZE);
-SeqQueueEn(&Q, 1); //
+SeqQueueEn(&Q, 1); 
 SeqQueueEn(&Q, 2);
 SeqQueueEn(&Q, 3);
 SeqQueueEn(&Q, 4);
 SeqQueueEn(&Q, 5);
+SeqQueueEn(&Q, 6);
+
 SeqQueueShow(&Q);
 
 SeqQueueDe(&Q);
@@ -78,7 +80,7 @@ SeqQueueEn(&Q, 7);
 SeqQueueEn(&Q, 8);
 SeqQueueEn(&Q, 9);
 
-SeqQueueDestroy(&Q);
+//SeqQueueDestroy(&Q);
 
 return 0;
 }
