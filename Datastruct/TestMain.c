@@ -7,7 +7,23 @@
 //#include"dclist.h"
 //#include"stack.h"
 #include"queue.h"
+int main()
+{
+	LinkQueue LQ;
+	LinkQueueInit(&LQ);
+	LinkQueueEn(&LQ, 1);
+	LinkQueueEn(&LQ, 2);
+	LinkQueueEn(&LQ, 3);
+	LinkQueueEn(&LQ, 4);
+	LinkQueueEn(&LQ, 5);
+	LinkQueueShow(&LQ);
 
+	LinkQueueDestroy(&LQ);
+	LinkQueueShow(&LQ);
+
+	return 0;
+}
+/*
 int main()
 {
 	LinkQueue LQ;
@@ -84,10 +100,10 @@ SeqQueueInit(&Q, DEFAULT_QUEUE_SIZE);
 SeqQueueEn(&Q, 1); 
 SeqQueueEn(&Q, 2);
 SeqQueueEn(&Q, 3);
-SeqQueueEn(&Q, 4);
 SeqQueueEn(&Q, 5);
 SeqQueueEn(&Q, 6);
 
+SeqQueueEn(&Q, 4);
 SeqQueueShow(&Q);
 
 SeqQueueDe(&Q);

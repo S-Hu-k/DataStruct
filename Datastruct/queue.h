@@ -24,7 +24,7 @@ void SeqQueueDestroy(SeqQueue *Q);
 
 
 /////////////////////////////////////////////////
-
+ 
 void SeqQueueInit(SeqQueue *Q, int sz)
 {
    Q->capacity = sz > DEFAULT_QUEUE_SIZE ? sz : DEFAULT_QUEUE_SIZE;
@@ -151,7 +151,94 @@ void SeqCyQueueDestroy(SeqCyQueue *Q)
 	Q->capacity = Q->front = Q->tail = 0;
 }
 ///////////////链式队列
+typedef struct LinkQueueNode
+{
+	DataType data;
+	struct LinkQueueNode *next;
+}LinkQueueNode;
+typedef struct LinkQueue
+{
+	LinkQueueNode *front;
+	LinkQueueNode *tail;
+}LinkQueue;
 
+bool LinkQueueEmpty(SeqCyQueue *Q)
+{
+	return Q->front == NULL;
+}
+
+void LinkQueueInit(LinkQueue *Q);
+void LinkQueueEn(LinkQueue *Q, DataType x);
+void LinkQueueShow(LinkQueue *Q);
+DataType LinkQueueFront(LinkQueue *Q);
+void LinkQueueDe(LinkQueue *Q);
+void LinkQueueDestroy(LinkQueue *Q);
+
+
+void LinkQueueInit(LinkQueue *Q)
+{
+	Q->front = Q->tail = NULL;
+}
+void LinkQueueEn(LinkQueue *Q, DataType x)
+{
+	LinkQueueNode *s = (LinkQueueNode*)malloc(sizeof(LinkQueueNode));
+	assert(s != NULL);
+	s->data = x;
+	s->next = NULL;
+
+	if (LinkQueueEmpty(Q))
+	{
+		Q->front = Q->tail = s;
+	}
+	else
+	{
+		Q->tail->next = s;
+		Q->tail = s;
+	}
+}
+void LinkQueueShow(LinkQueue *Q)
+{
+	LinkQueueNode *p = Q->front;
+	while (p != NULL)
+
+	{
+		printf("%d-->", p->data);
+		p = p->next;
+	}
+	printf("\n");
+}
+DataType LinkQueueFront(LinkQueue *Q)
+{
+	if (LinkQueueEmpty(Q))
+	{
+		printf("队列已空 不能去对头元素 \n");
+		return;
+	}
+	return Q->front->data;
+}
+
+void LinkQueueDe(LinkQueue *Q)
+{
+	if (LinkQueueEmpty(Q))
+	{
+		printf("队列已空 不能出队 \n");
+		return;
+	}
+	LinkQueueNode *p = Q->front;
+	Q->front = Q->front->next;
+	free(p);
+}
+void LinkQueueDestroy(LinkQueue *Q)
+{
+	LinkQueueNode *p = Q->front;
+	while (p != NULL)
+	{
+		Q->front = Q->front->next;
+		free(p);
+		p = Q->front;
+	}
+	Q->front = Q->tail = NULL;
+}
 //顺序队列
 /*
 typedef struct SeqQueue

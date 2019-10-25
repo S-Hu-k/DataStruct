@@ -1,4 +1,4 @@
-﻿生成启动时间为 2019/10/24 14:49:58。
+﻿生成启动时间为 2019/10/25 18:37:39。
      1>项目“C:\Users\20961\Desktop\DataStruct\Datastruct\test-10-8.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt TestMain.c
@@ -16,8 +16,14 @@
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(65): warning C4033: “SeqQueueFront”必须返回值
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(111): warning C4133: “函数”: 从“SeqCyQueue *”到“SeqQueue *”的类型不兼容
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(125): warning C4033: “SeqCyQueueFront”必须返回值
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(167): warning C4047: “==”:“int”与“void *”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(189): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(212): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(215): warning C4033: “LinkQueueFront”必须返回值
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(222): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(68): warning C4715: “SeqQueueFront”: 不是所有的控件路径都返回值
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(128): warning C4715: “SeqCyQueueFront”: 不是所有的控件路径都返回值
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(218): warning C4715: “LinkQueueFront”: 不是所有的控件路径都返回值
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.lib" /MACHINE:X86 Debug\TestMain.obj
          test-10-8.vcxproj -> C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.exe
@@ -25,4 +31,4 @@
 
 生成成功。
 
-已用时间 00:00:00.62
+已用时间 00:00:00.63
