@@ -1,0 +1,25 @@
+﻿生成启动时间为 2019/10/26 14:03:48。
+     1>项目“c:\Users\20961\documents\visual studio 2013\Projects\练习题\练习题\练习题.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt test.c
+         test.c
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(5): error C2143: 语法错误 : 缺少“;”(在“{”的前面)
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(7): error C2065: “head”: 未声明的标识符
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(7): warning C4047: “==”:“int”与“void *”的间接级别不同
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(7): error C2223: “->next”的左侧必须指向结构/联合
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(8): error C2065: “head”: 未声明的标识符
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(9): error C2065: “head”: 未声明的标识符
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(9): warning C4047: “初始化”:“ListNode *”与“int”的间接级别不同
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(10): error C2065: “head”: 未声明的标识符
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(10): error C2223: “->next”的左侧必须指向结构/联合
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(14): error C2037: “next”的左侧部分指定未定义的结构/联合“ListNode”
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(15): error C2037: “next”的左侧部分指定未定义的结构/联合“ListNode”
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(15): error C2065: “head”: 未声明的标识符
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(16): error C2065: “head”: 未声明的标识符
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(16): warning C4047: “=”:“int”与“ListNode *”的间接级别不同
+     1>c:\users\20961\documents\visual studio 2013\projects\练习题\练习题\test.c(19): error C2065: “head”: 未声明的标识符
+     1>已完成生成项目“c:\Users\20961\documents\visual studio 2013\Projects\练习题\练习题\练习题.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.20
