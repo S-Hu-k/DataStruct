@@ -496,5 +496,3 @@ void LinkQueueDestroy(LinkQueue *Q)
 }
 */
 #endif /* _QUEUE_H_ */
-
-#INCLUDE
