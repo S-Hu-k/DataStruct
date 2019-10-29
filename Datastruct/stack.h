@@ -88,16 +88,24 @@ void SeqStackShow(SeqStack *pst)
 }
 
 //Á´Õ»
+#include"bintree.h"
+#define StackDateType BinTreeNode* 
 typedef struct StackNode
 {
-	DataType data;
+	StackDateType data;
 	struct StackNode *next;
 }StackNode;
+
 typedef StackNode* ListStack;
+bool ListStackEmpty(ListStack *pst)
+
+{
+	return *pst == NULL;
+}
 
 void ListStackInit(ListStack*pst);
-void ListStackPush(ListStack*pst,DataType x);
-DataType ListStackTop(ListStack*pst);
+void ListStackPush(ListStack*pst, StackDateType x);
+StackDateType ListStackTop(ListStack*pst);
 void ListStackShow(ListStack*pst);
 void ListStackPop(ListStack *pst);
 
@@ -107,7 +115,7 @@ void ListStackInit(ListStack*pst)
 {
 	*pst = NULL;
 }
-void ListStackPush(ListStack *pst, DataType x)
+void ListStackPush(ListStack *pst, StackDateType x)
 {
 	StackNode *node = (ListStack*)malloc(sizeof(StackNode));
 	assert(node != NULL);
@@ -117,7 +125,7 @@ void ListStackPush(ListStack *pst, DataType x)
 	*pst = node;
 }
 
-DataType ListStackTop(ListStack*pst)
+StackDateType ListStackTop(ListStack*pst)
 {
 	assert(*pst != NULL);
 	return (*pst)->data;

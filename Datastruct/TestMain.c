@@ -1,12 +1,103 @@
-//#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS 1
+
 //#include<stdio.h>
 
 //#include"slist.h"
-#include"seqlist.h"
+//#include"seqlist.h"
 //#include"dlist.h"
 //#include"dclist.h"
 //#include"stack.h"
-#include"queue.h"
+//#include"queue.h"
+#include"bintree.h"
+
+int main()
+{
+	char *str = "ABC##DE##F##G#H##";
+	char *str1 = "ABC##D#F##GE##H##";
+
+	int i = 0,j=0;
+	BinTree bt;
+	BinTree bt1;
+
+	BinTreeInit(&bt);
+	BinTreeInit(&bt1);
+
+	//BinTreeCreate(&bt);
+ BinTreeCreateByStr( &bt, str, &i);
+ BinTreeCreateByStr(&bt1, str, &j);
+
+	
+	printf("VLR:");
+	PreOrder(&bt);
+	printf("\n");
+	printf("LVR:");
+	InOrder(&bt);
+	printf("\n");
+	printf("LRV:");
+	PostOrder(&bt);
+	printf("\n");
+	printf("Level:");
+	PostOrder(&bt);
+	printf("\n");
+
+
+	printf("Size=%d \n", Size(&bt));
+	printf("Height=%d\n", Height(&bt));
+	BinTreeNode *p = Find(&bt, 'B');
+	p = Parent(&bt, 'C');
+
+
+	Clone(&bt,&bt1);
+
+	bool flag = Equal(&bt, &bt1);
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 int main()
 {
 	LinkQueue LQ;
@@ -23,7 +114,7 @@ int main()
 
 	return 0;
 }
-/*
+
 int main()
 {
 	LinkQueue LQ;
@@ -41,7 +132,7 @@ int main()
 
 }
 
-/*
+
 
 
 int main()
@@ -92,7 +183,7 @@ SeqCyQueueShow(&CQ);
 return 0;
 }
 
-/*
+
 int main()
 {
 SeqQueue Q;//
@@ -134,7 +225,7 @@ int main()
 	ListStackShow(st);
 	return 0;
 }
-/*
+
 int main()
 {
 	SeqStack st;
@@ -159,7 +250,7 @@ int main()
 	return 0;
 }
 
-/*int main()
+int main()
 {
 	//SeqList mylist;
 	//SeqListInit(&mylist, SEQLIST_DEFAULT_SIZE);
@@ -326,29 +417,31 @@ int main()
 			DCListClear(&mylist);
 			break;
 		case 16:
-			/*SeqListModifyPos(&mylist, item);*/
-//
-//			printf("请输入要修改的位置:>\n");
-//			printf("请输入要修改的值:>\n");
-//			scanf("%d%d", &pos, &item);
-//			//SeqListModifyPos(&mylist, pos, item);
-//			break;
-//		case 17:
-//			printf("请输入要改的值:>\n");
-//			printf("请输入改后的值;>\n");
-//			scanf("%d %d", &item, &x);
-//			//SeqListModifyVal(&mylist, item, x);
-//			break;
-//		case 18:
-//			//SListDestroy(&mylist);
-//			DCListDestroy(&mylist);
-//			break;
-//		default:
-//			printf("输入错误，请重新输入....\n");
-//			break;
-//		}
-//		system("pause");
-//	}
-//	
-//	return 0;
-//}*/
+			/*SeqListModifyPos(&mylist, item);
+
+			printf("请输入要修改的位置:>\n");
+		printf("请输入要修改的值:>\n");
+		scanf("%d%d", &pos, &item);
+			//SeqListModifyPos(&mylist, pos, item);
+		break;
+	case 17:
+		printf("请输入要改的值:>\n");
+		printf("请输入改后的值;>\n");
+		scanf("%d %d", &item, &x);
+		//SeqListModifyVal(&mylist, item, x);
+		break;
+	case 18:
+			//SListDestroy(&mylist);
+			DCListDestroy(&mylist);
+			break;
+	default:
+			printf("输入错误，请重新输入....\n");
+			break;
+		}
+		system("pause");
+	}
+	
+	return 0;
+}
+
+*/

@@ -1,29 +1,31 @@
-﻿生成启动时间为 2019/10/26 14:13:20。
+﻿生成启动时间为 2019/10/29 18:45:31。
      1>项目“C:\Users\20961\Desktop\DataStruct\Datastruct\test-10-8.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt TestMain.c
          TestMain.c
-     1>c:\users\20961\desktop\datastruct\datastruct\seqlist.h(80): warning C4018: “<”: 有符号/无符号不匹配
-     1>c:\users\20961\desktop\datastruct\datastruct\seqlist.h(111): warning C4018: “<”: 有符号/无符号不匹配
-     1>c:\users\20961\desktop\datastruct\datastruct\seqlist.h(212): warning C4553: “==”: 运算符不起任何作用；是否是有意使用“=”的?
-     1>c:\users\20961\desktop\datastruct\datastruct\seqlist.h(224): warning C4018: “>”: 有符号/无符号不匹配
-     1>c:\users\20961\desktop\datastruct\datastruct\seqlist.h(226): warning C4018: “<”: 有符号/无符号不匹配
-     1>c:\users\20961\desktop\datastruct\datastruct\seqlist.h(248): warning C4018: “<”: 有符号/无符号不匹配
-     1>c:\users\20961\desktop\datastruct\datastruct\seqlist.h(259): warning C4018: “>”: 有符号/无符号不匹配
-     1>c:\users\20961\desktop\datastruct\datastruct\seqlist.h(270): warning C4018: “<”: 有符号/无符号不匹配
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(15): warning C4018: “>=”: 有符号/无符号不匹配
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(45): warning C4018: “<”: 有符号/无符号不匹配
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(65): warning C4033: “SeqQueueFront”必须返回值
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(111): warning C4133: “函数”: 从“SeqCyQueue *”到“SeqQueue *”的类型不兼容
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(125): warning C4033: “SeqCyQueueFront”必须返回值
-     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(167): warning C4047: “==”:“int”与“void *”的间接级别不同
-     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(189): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
-     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(212): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
-     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(215): warning C4033: “LinkQueueFront”必须返回值
-     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(222): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(172): warning C4047: “==”:“int”与“void *”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(194): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(217): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(220): warning C4033: “LinkQueueFront”必须返回值
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(227): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(133): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(245): warning C4047: “=”:“int”与“BinTreeNode *”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(246): warning C4047: “!=”:“int”与“void *”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(247): warning C4047: “return”:“BinTreeNode *”与“int”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\stack.h(27): warning C4018: “>=”: 有符号/无符号不匹配
+     1>c:\users\20961\desktop\datastruct\datastruct\stack.h(60): warning C4033: “SeqStackTop”必须返回值
+     1>c:\users\20961\desktop\datastruct\datastruct\stack.h(120): warning C4047: “初始化”:“StackNode *”与“ListStack *”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\stack.h(124): warning C4047: “=”:“StackNode *”与“ListStack *”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\stack.h(144): warning C4028: 形参 1 与声明不同
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(68): warning C4715: “SeqQueueFront”: 不是所有的控件路径都返回值
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(128): warning C4715: “SeqCyQueueFront”: 不是所有的控件路径都返回值
-     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(218): warning C4715: “LinkQueueFront”: 不是所有的控件路径都返回值
+     1>c:\users\20961\desktop\datastruct\datastruct\queue.h(223): warning C4715: “LinkQueueFront”: 不是所有的控件路径都返回值
+     1>c:\users\20961\desktop\datastruct\datastruct\stack.h(63): warning C4715: “SeqStackTop”: 不是所有的控件路径都返回值
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.lib" /MACHINE:X86 Debug\TestMain.obj
          test-10-8.vcxproj -> C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.exe
@@ -31,4 +33,4 @@
 
 生成成功。
 
-已用时间 00:00:01.29
+已用时间 00:00:00.81
