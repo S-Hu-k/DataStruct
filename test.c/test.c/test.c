@@ -194,84 +194,112 @@
 //}
 
 ////////////////////////////////////////
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h> 
-typedef int ElemType;
-typedef struct Node 
-{   
-	ElemType data;   
-	struct Node *next;
-} Node, *LinkStack; //初始化栈
-LinkStack initStack(LinkStack s); 
-//入栈
-bool pushStack(LinkStack s, ElemType e);//出栈
-Node* popStack(LinkStack s); //打印栈
-void printStack(LinkStack s); //判空
-bool isEmptyStack(LinkStack s); //获取栈元素个数
-int getLength(LinkStack s); //初始化栈
-LinkStack initStack(LinkStack s) 
-{   
-	s = (LinkStack) malloc(sizeof(Node)); 
-	s->next = NULL;    return s;
-} //入栈
-bool pushStack(LinkStack s, ElemType e)
-{    
-	Node *p = (LinkStack) malloc(sizeof(Node));  
-	if(!p) return false;   
-	p->data = e;  
-	p->next = s->next;  
-	s->next = p;   
-	return true;
-} //出栈
-Node* popStack(LinkStack s) 
-{    
-	Node *p = s->next;  
-	if(p!=NULL) 
-	{      
-		s->next = p->next;   
-	}    
-	return p;
-} //打印栈
-void printStack(LinkStack s)
-{  
-	Node *p = s->next;
-	while(p!=NULL) 
-	{       
-		printf("stack elem: %d\n",p->data); 
-		p = p->next;  
-	}
-} //判空
-bool isEmptyStack(LinkStack s)
-{    
-	if( !s || s->next == NULL) 
-		return true;    
-	return false;
-} //获取栈元素个数
-int getLength(LinkStack s)
-{    
-	Node *p = s->next;  
-int i= 0;    while(p!=NULL)
-{    
-
-	i++;    
-	p=p->next;   
-}   
-return i;
-} 
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <stdbool.h> 
+//typedef int ElemType;
+//typedef struct Node 
+//{   
+//	ElemType data;   
+//	struct Node *next;
+//} Node, *LinkStack; //初始化栈
+//LinkStack initStack(LinkStack s); 
+////入栈
+//bool pushStack(LinkStack s, ElemType e);//出栈
+//Node* popStack(LinkStack s); //打印栈
+//void printStack(LinkStack s); //判空
+//bool isEmptyStack(LinkStack s); //获取栈元素个数
+//int getLength(LinkStack s); //初始化栈
+//LinkStack initStack(LinkStack s) 
+//{   
+//	s = (LinkStack) malloc(sizeof(Node)); 
+//	s->next = NULL;    return s;
+//} //入栈
+//bool pushStack(LinkStack s, ElemType e)
+//{    
+//	Node *p = (LinkStack) malloc(sizeof(Node));  
+//	if(!p) return false;   
+//	p->data = e;  
+//	p->next = s->next;  
+//	s->next = p;   
+//	return true;
+//} //出栈
+//Node* popStack(LinkStack s) 
+//{    
+//	Node *p = s->next;  
+//	if(p!=NULL) 
+//	{      
+//		s->next = p->next;   
+//	}    
+//	return p;
+//} //打印栈
+//void printStack(LinkStack s)
+//{  
+//	Node *p = s->next;
+//	while(p!=NULL) 
+//	{       
+//		printf("stack elem: %d\n",p->data); 
+//		p = p->next;  
+//	}
+//} //判空
+//bool isEmptyStack(LinkStack s)
+//{    
+//	if( !s || s->next == NULL) 
+//		return true;    
+//	return false;
+//} //获取栈元素个数
+//int getLength(LinkStack s)
+//{    
+//	Node *p = s->next;  
+//int i= 0;    while(p!=NULL)
+//{    
+//
+//	i++;    
+//	p=p->next;   
+//}   
+//return i;
+//} 
+//int main()
+//{
+//	LinkStack S=0;
+//	 S = initStack(S); 
+//	pushStack(S,1);   
+//	pushStack(S,2);   
+//	pushStack(S,3);   
+//	pushStack(S,4);  
+//	printStack(S);  
+//	printf("pop elem is %d\n",popStack(S)->data);  
+//	printf("pop elem is %d\n",popStack(S)->data);  
+//	printf("pop elem is %d\n",popStack(S)->data);  
+//	printf("pop elem is %d\n",popStack(S)->data);   
+//	printf("stack length %d\n",getLength(S));
+//	return 0;
+//}
+//////////////////////////////////////////////////////
 int main()
 {
-	LinkStack S=0;
-	 S = initStack(S); 
-	pushStack(S,1);   
-	pushStack(S,2);   
-	pushStack(S,3);   
-	pushStack(S,4);  
-	printStack(S);  
-	printf("pop elem is %d\n",popStack(S)->data);  
-	printf("pop elem is %d\n",popStack(S)->data);  
-	printf("pop elem is %d\n",popStack(S)->data);  
-	printf("pop elem is %d\n",popStack(S)->data);   
-	printf("stack length %d\n",getLength(S));
+	int i, n, t = 0;
+	long int f, f1 = 1, f2 = 1;
+	scanf("%d", &n);
+	if (n < 1)
+	{
+		printf("cuowu.\n");
+	}
+	else
+		printf("%5d%5d", f1, f2);
+	for (i = 3; i <= n; i++)
+	{
+		f = f1 + f2;
+		printf("%5d", f);
+		f1 = f2;
+		f2 = f;
+		t++;
+		if ((t+2) % 5 == 0)
+			printf("\n");
+	}
+	printf("\n");
 	return 0;
 }
+
+
+
