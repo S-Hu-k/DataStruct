@@ -253,11 +253,10 @@ BinTreeNode* Parent(BinTree *t, DataType key)
 	return _Parent(t->root, key);
 }
 
-
 BinTreeNode* _Clone(BinTreeNode *t)
 {
 	if (t == NULL)
-		return NULL;
+		return false;
 	else
 	{
 		BinTreeNode *p = (BinTreeNode*)malloc(sizeof(BinTreeNode));
@@ -265,23 +264,45 @@ BinTreeNode* _Clone(BinTreeNode *t)
 		p->leftChild = _Clone(t->leftChild);
 		p->rightChild = _Clone(t->rightChild);
 		return p;
-
-
 	}
 }
+//
+//BinTreeNode* _Clone(BinTreeNode *t)
+//{
+//	if (t == NULL)
+//		return NULL;
+//	else
+//	{
+//		BinTreeNode *p = (BinTreeNode*)malloc(sizeof(BinTreeNode));
+//		p->data = t->data;
+//		p->leftChild = _Clone(t->leftChild);
+//		p->rightChild = _Clone(t->rightChild);
+//		return p;
+//
+//
+//	}
+//}
 void Clone(BinTree *t1, BinTree *t2)
 {
 	t2->root= _Clone(t1->root);
 }
-bool _Equal(BinTreeNode *t1, BinTreeNode *t2)// true false
+bool _Equal(BinTreeNode *t1, BinTreeNode *t2)
 {
 	if (t1 == NULL&&t2 == NULL)
 		return true;
 	if (t1 == NULL || t2 == NULL)
 		return false;
-	return (t1->data == t2->data) && _Equal(t1->leftChild, t2->leftChild) && _Equal(t1->rightChild, t2->rightChild);
-
+	return ((t1->data == t2->data)&&_Equal(t1->leftChild, t2->leftChild) && _Equal(t1->rightChild, t2->rightChild));
 }
+//bool _Equal(BinTreeNode *t1, BinTreeNode *t2)// true false
+//{
+//	if (t1 == NULL&&t2 == NULL)
+//		return true;
+//	if (t1 == NULL || t2 == NULL)
+//		return false;
+//	return (t1->data == t2->data) && _Equal(t1->leftChild, t2->leftChild) && _Equal(t1->rightChild, t2->rightChild);
+//
+//}
 bool Equal(BinTree *t1, BinTree *t2)// true false
 {
 	return _Equal(t1->root, t2->root);
