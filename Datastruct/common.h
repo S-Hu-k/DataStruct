@@ -8,4 +8,15 @@
 
 typedef enum{FALSE,TRUE}BOOL;
 #define DataType char
+//½»»»º¯Êý
+void Swap(DataType *a, DataType *b)
+{
+	DataType tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+
+
+
 #endif

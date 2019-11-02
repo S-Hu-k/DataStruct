@@ -1,4 +1,4 @@
-﻿生成启动时间为 2019/11/1 19:35:07。
+﻿生成启动时间为 2019/11/2 14:35:52。
      1>项目“C:\Users\20961\Desktop\DataStruct\Datastruct\test-10-8.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt TestMain.c
@@ -13,10 +13,10 @@
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(217): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(220): warning C4033: “LinkQueueFront”必须返回值
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(227): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
-     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(133): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
-     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(245): warning C4047: “=”:“int”与“BinTreeNode *”的间接级别不同
-     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(246): warning C4047: “!=”:“int”与“void *”的间接级别不同
-     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(247): warning C4047: “return”:“BinTreeNode *”与“int”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(139): warning C4133: “函数”: 从“LinkQueue *”到“SeqCyQueue *”的类型不兼容
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(251): warning C4047: “=”:“int”与“BinTreeNode *”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(252): warning C4047: “!=”:“int”与“void *”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(253): warning C4047: “return”:“BinTreeNode *”与“int”的间接级别不同
      1>c:\users\20961\desktop\datastruct\datastruct\stack.h(27): warning C4018: “>=”: 有符号/无符号不匹配
      1>c:\users\20961\desktop\datastruct\datastruct\stack.h(60): warning C4033: “SeqStackTop”必须返回值
      1>c:\users\20961\desktop\datastruct\datastruct\stack.h(120): warning C4047: “初始化”:“StackNode *”与“ListStack *”的间接级别不同
@@ -33,4 +33,4 @@
 
 生成成功。
 
-已用时间 00:00:00.57
+已用时间 00:00:00.61

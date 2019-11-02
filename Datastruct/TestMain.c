@@ -12,9 +12,14 @@
 
 int main()
 {
-	char *str = "ABC##DE##F##G#H##";
-	char *str1 = "ABC##D#F##GE##H##";
+	//char *str = "ABC##DE##F##G#H##";
+	//char *str1 = "ABC##D#F##GE##H##";
+	char *vlr = "ABCDEFGH";
+	char *lvr = "CBEDFAGH";
 
+	/*char *vlr = "ABCDEFGH";
+	char *lvr = "CBEDFAGH";*/
+	int n = strlen(lvr);
 	int i = 0,j=0;
 	BinTree bt;
 	BinTree bt1;
@@ -22,10 +27,12 @@ int main()
 	BinTreeInit(&bt);
 	BinTreeInit(&bt1);
 
-	//BinTreeCreate(&bt);
- BinTreeCreateByStr( &bt, str, &i);
- BinTreeCreateByStr(&bt1, str, &j);
-
+    //BinTreeCreate(&bt);
+    //BinTreeCreateByStr( &bt, str, &i);
+    //BinTreeCreateByStr(&bt1, str, &j);
+	printf("_VLR_LVR:");
+	BinTreeCreateBy_VLR_LVR(&bt, vlr, lvr, n);
+	printf("\n");
 	
 	printf("VLR:");
 	PreOrder(&bt);
@@ -52,39 +59,6 @@ int main()
 	bool flag = Equal(&bt, &bt1);
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -20,8 +20,14 @@ void BinTreeInit(BinTree *t);
 void BinTreeCreate(BinTree *t);
 void _BinTreeCreate_1(BinTreeNode **t);
 BinTreeNode* _BinTreeCreate_2();
-BinTreeNode* _BinTreeCreateByStr(char *str, int *i);
+BinTreeNode* _BinTreeCreateByStr(char *str, int *i);//×Ö·û´®
 void BinTreeCreateByStr(BinTree *t, char *str, int *i);
+
+
+BinTreeNode* _BinTreeCreateBy_VLR_LVR(char*vlr, char*lvr, int n);
+void BinTreeCreateBy_VLR_LVR(BinTree *t, char*vlr, char*lvr, int n);
+
+
 //¶þ²æÊ÷±éÀú
 void _PreOrder(BinTreeNode *t);
 void PreOrder(BinTree *t);
@@ -337,6 +343,69 @@ void _InOrderNoR(BinTreeNode *t);
 void InOrderNoR(BinTree *t);
 void _PostOrderNoR(BinTreeNode *t);
 void PostOrderNoR(BinTree *t);
+
+
+BinTreeNode* _BinTreeCreateBy_VLR_LVR(char*vlr, char*lvr, int n)
+{	
+	if (n == 0)
+		return NULL;
+	int k = 0;
+	while (lvr[k] != vlr[0])
+	{
+		k++;
+	}
+	BinTreeNode *t = (BinTreeNode*)malloc(sizeof(BinTreeNode));
+	t->data = lvr[k];
+	t->rightChild = _BinTreeCreateBy_VLR_LVR(vlr + k + 1, lvr + k + 1, n - k - 1);
+	t->leftChild = _BinTreeCreateBy_VLR_LVR(vlr + 1, lvr, k);
+	
+	return t;
+}
+void BinTreeCreateBy_VLR_LVR(BinTree *t, char*vlr, char*lvr, int n)
+{
+	t->root = _BinTreeCreateBy_VLR_LVR(lvr, vlr, n);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 typedef BinTreeNode* BinTree;
 void BinTreeInit(BinTree *t);

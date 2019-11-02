@@ -276,6 +276,7 @@
 //	return 0;
 //}
 //////////////////////////////////////////////////////
+/*
 int main()
 {
 	int i, n, t = 0;
@@ -300,6 +301,24 @@ int main()
 	printf("\n");
 	return 0;
 }
+*/
 
+´íÎó´úÂë
+/*
+ myswap( a,  b)
+{
+ int  tmp = a;
+	a = b;
+	b = tmp;
+}
+int main()
+{
+	int x = 0;
+	int y = 0;
+	scanf("%d%d ", &x, &y);
+	return myswap(x, y);
+	
+	return 0;
+}
 
-
+*/
