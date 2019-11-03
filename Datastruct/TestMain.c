@@ -35,34 +35,34 @@ int main()
 	printf("\n");
 	printf("\n");
 
-	//printf("LVR   :");
-	////InOrder(&bt);
-	//printf("\n");
-	//printf("LVR NR:");
-	////InOrderNoR(&bt);
-	//printf("\n");
-	//printf("\n");
+	printf("LVR   :");
+	InOrder(&bt);
+	printf("\n");
+	printf("LVR NR:");
+	InOrderNoR(&bt);
+	printf("\n");
+	printf("\n");
 
-	//printf("LRV   :");
-	////PostOrder(&bt);
-	//printf("\n");
-	//printf("LRV NR:");
-	////PostOrderNoR(&bt);
-	//printf("\n");
-	//printf("\n");
-
-
-	//printf("Level:");
-	//LevelOrder(&bt);
-	//printf("\n");
-	//printf("Size = %d\n", Size(&bt));
-	//printf("Hegith = %d\n", Height(&bt));
-	//BinTreeNode *p = Find(&bt, 'B');
-	//p = Parent(&bt, 'H');
+	printf("LRV   :");
+	PostOrder(&bt);
+	printf("\n");
+	printf("LRV NR:");
+	PostOrderNoR(&bt);
+	printf("\n");
+	printf("\n");
 
 
-	////Clone(&bt, &bt1);
-	//bool flag = Equal(&bt, &bt1);
+	printf("Level:");
+	LevelOrder(&bt);
+	printf("\n");
+	printf("Size = %d\n", Size(&bt));
+	printf("Hegith = %d\n", Height(&bt));
+	BinTreeNode *p = Find(&bt, 'B');
+	p = Parent(&bt, 'H');
+
+
+	Clone(&bt, &bt1);
+	bool flag = Equal(&bt, &bt1);
 	return 0;
 }
 /*
