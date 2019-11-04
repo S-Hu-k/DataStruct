@@ -1,4 +1,4 @@
-﻿生成启动时间为 2019/11/3 21:08:22。
+﻿生成启动时间为 2019/11/4 18:32:13。
      1>项目“C:\Users\20961\Desktop\DataStruct\Datastruct\test-10-8.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt TestMain.c
@@ -20,8 +20,11 @@
      1>c:\users\20961\desktop\datastruct\datastruct\stack.h(27): warning C4018: “>=”: 有符号/无符号不匹配
      1>c:\users\20961\desktop\datastruct\datastruct\stack.h(60): warning C4033: “SeqStackTop”必须返回值
      1>c:\users\20961\desktop\datastruct\datastruct\stack.h(120): warning C4047: “初始化”:“StackNode *”与“ListStack *”的间接级别不同
-     1>c:\users\20961\desktop\datastruct\datastruct\stack.h(124): warning C4047: “=”:“StackNode *”与“ListStack *”的间接级别不同
-     1>c:\users\20961\desktop\datastruct\datastruct\stack.h(144): warning C4028: 形参 1 与声明不同
+     1>c:\users\20961\desktop\datastruct\datastruct\stack.h(123): warning C4047: “=”:“StackNode *”与“ListStack *”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\stack.h(143): warning C4028: 形参 1 与声明不同
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(436): warning C4028: 形参 1 与声明不同
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(436): warning C4028: 形参 3 与声明不同
+     1>c:\users\20961\desktop\datastruct\datastruct\bintree.h(436): warning C4029: 声明的形参表不同于定义
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(68): warning C4715: “SeqQueueFront”: 不是所有的控件路径都返回值
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(128): warning C4715: “SeqCyQueueFront”: 不是所有的控件路径都返回值
      1>c:\users\20961\desktop\datastruct\datastruct\queue.h(223): warning C4715: “LinkQueueFront”: 不是所有的控件路径都返回值
@@ -33,4 +36,4 @@
 
 生成成功。
 
-已用时间 00:00:00.70
+已用时间 00:00:00.79

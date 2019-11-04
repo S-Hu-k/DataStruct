@@ -120,7 +120,6 @@ void ListStackPush(ListStack *pst, StackDateType x)
 	StackNode *node = (ListStack*)malloc(sizeof(StackNode));
 	assert(node != NULL);
 	node->data = x;
-
 	node->next = pst;
 	*pst = node;
 }
