@@ -8,7 +8,15 @@
 //#include"dclist.h"
 //#include"stack.h"
 //#include"queue.h"
-#include"bintree.h"
+//#include"bintree.h"
+#include"sort.h"
+int main()
+{
+	int ar[]= { 5, 6, 2, 3, 4,3 , 8, 9, 7, 5, 1 };
+
+	return 0;
+}
+/*
 int main()
 {
 	//char *str = "ABC##DE##F##G#H##";
@@ -65,7 +73,7 @@ int main()
 	bool flag = Equal(&bt, &bt1);
 	return 0;
 }
-/*
+
 int main()
 {
 	//char *str = "ABC##DE##F##G#H##";
