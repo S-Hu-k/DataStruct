@@ -1,9 +1,12 @@
-﻿生成启动时间为 2019/11/4 21:09:47。
+﻿生成启动时间为 2019/11/6 20:58:06。
      1>项目“C:\Users\20961\Desktop\DataStruct\Datastruct\test-10-8.vcxproj”在节点 2 上(Build 个目标)。
-     1>Link:
-         test-10-8.vcxproj -> C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.exe
-     1>已完成生成项目“C:\Users\20961\Desktop\DataStruct\Datastruct\test-10-8.vcxproj”(Build 个目标)的操作。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt TestMain.c
+         TestMain.c
+     1>c:\users\20961\desktop\datastruct\datastruct\sort.h(7): error C2082: 形参“left”的重定义
+     1>cl : 命令行 warning D9028: 最小重新生成失败，正在转换为标准生成
+     1>已完成生成项目“C:\Users\20961\Desktop\DataStruct\Datastruct\test-10-8.vcxproj”(Build 个目标)的操作 - 失败。
 
-生成成功。
+生成失败。
 
-已用时间 00:00:00.69
+已用时间 00:00:01.13
