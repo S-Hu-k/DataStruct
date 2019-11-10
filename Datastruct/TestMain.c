@@ -12,13 +12,14 @@
 #include"sort.h"
 //#include"heap.h"
 //#include"bst.h"
-int main()
+void main()
 {
-	int ar[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
+	int ar[] = { 0,49, 38, 65, 97, 76, 13, 27, 49 };
 	int n = sizeof(ar) / sizeof(int);
-
-
-	return 0;
+	PrintArray(ar, 1, n-1);
+	TestSort(ar, 1,n-1);
+	TestSortEfficiency();
+	
 }
 /*
 int main()

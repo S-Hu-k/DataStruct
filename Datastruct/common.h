@@ -7,7 +7,7 @@
 #include<stdbool.h>
 
 typedef enum{FALSE,TRUE}BOOL;
-#define DataType char
+#define DataType int
 //½»»»º¯Êý
 void Swap(DataType *a, DataType *b)
 {
