@@ -80,13 +80,6 @@ DataType HeapTop(Heap *php)
 		return php->heap[0];
 	}
 }
-//DataType HeapTop(Heap *php)
-//{
-//	if (!HeapEmpty(php))
-//	{
-//		return php->heap[0];
-//	}
-//}
 bool HeapRemove(Heap *php)
 {
 

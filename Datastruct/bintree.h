@@ -315,6 +315,7 @@ bool Equal(BinTree *t1, BinTree *t2)// true false
 }
 
 #include"stack.h"
+//前序非递归
 void _PreOrderNoR(BinTreeNode *t)
 {
 	/*if (t != NULL)
@@ -339,9 +340,7 @@ void _PreOrderNoR(BinTreeNode *t)
 		BinTreeNode *p;
 		ListStack st;
 		ListStackInit(&st);
-		do
-		{
-			while (t != NULL)
+		while (!ListStackEmpty(&st))
 			{
 				ListStackPush(&st, t);
 			    t = t->leftChild;
@@ -350,14 +349,17 @@ void _PreOrderNoR(BinTreeNode *t)
 			ListStackPop(&st);
 			printf("%c ", p->data);
 			if (p->rightChild != NULL)
-			t = p->rightChild;
-		} while (!ListStackEmpty(&st) || t != NULL);
+				ListStackPush(&st, p->rightChild);
+			if (p->leftChild != NULL)
+				ListStackPush(&st, p->leftChild);
+		} 
 	}
-}
+
 void PreOrderNoR(BinTree *t)
 {
 	_PreOrderNoR(t->root);
 }
+//中序非递归
 void _InOrderNoR(BinTreeNode *t)
 {
 	if (t != NULL)
@@ -366,22 +368,27 @@ void _InOrderNoR(BinTreeNode *t)
 		ListStack st;
 		ListStackInit(&st);
 		ListStackPush(&st, t);
-		while (!ListStackEmpty(&st))
+		do
 		{
+
+			while (t != NULL)
+			{
+				ListStackPush(&st, t);
+				t = t->leftChild;
+			}
 			p = ListStackTop(&st);
 			ListStackPop(&st);
-			printf("%c ", p->data);
+			printf("%c", p->data);
 			if (p->rightChild != NULL)
-				ListStackPush(&st, p->rightChild);
-			if (p->leftChild != NULL)
-				ListStackPush(&st, p->leftChild);
-		}
+				t = p->rightChild;
+		} while (!ListStackEmpty(&st) || t != NULL);
 	}
 }
 void InOrderNoR(BinTree *t)
 {
 	_InOrderNoR(t->root);
 }
+//后序非递归
 void _PostOrderNoR(BinTreeNode *t)
 {
 	if (t != NULL)

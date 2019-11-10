@@ -9,8 +9,36 @@
 //#include"stack.h"
 //#include"queue.h"
 //#include"bintree.h"
-//#include"sort.h"
-#include"heap.h"
+#include"sort.h"
+//#include"heap.h"
+//#include"bst.h"
+int main()
+{
+	int ar[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
+	int n = sizeof(ar) / sizeof(int);
+
+
+	return 0;
+}
+/*
+int main()
+{
+	BSTree bst;
+	int j = 0;
+	int ar[] = { 45, 10,24, 53, 12, 38,30,21, 90 };
+	int n = sizeof(ar) / sizeof(int);
+	BSTreeInit(&bst);
+	for (int i = 0; i < n; ++i)
+	{
+		Insert(&bst, ar[i]);
+	}
+		printf("min=%d ", MIN(bst));
+		printf("max=%d ", MAX(bst));
+
+	Sort(&bst, ar,&j);
+	return 0;
+}
+
 void main()
 {
 	int ar[] = { 27, 15, 19, 18, 28, 34, 65, 49, 25, 37 };
@@ -35,30 +63,31 @@ void main()
 }
 
 
-//int main()
-//{
-//	int ar[]= { 5, 6, 2, 3, 4,3 , 8, 9, 7, 5, 1 };
-//
-//	return 0;
-//}
-/*
 int main()
 {
-	//char *str = "ABC##DE##F##G#H##";
-	//char *str1 = "ABC##D#F##GE##H##";
+	int ar[]= { 5, 6, 2, 3, 4,3 , 8, 9, 7, 5, 1 };
+
+	return 0;
+}
+
+int main()
+{
+	char *str = "ABC##DE##F##G#H##";
+	char *str1 = "ABC##D#F##GE##H##";
 	char *vlr = "ABCDEFGH";
 	char *lvr = "CBEDFAGH";
 	char *lrv = "CEFDBHGA";
 	int n = strlen(lvr);
 	int i = 0, j = 0;
+	
 	BinTree bt, bt1;
 	BinTreeInit(&bt);
 	BinTreeInit(&bt1);
-	//BinTreeCreate(&bt);
-	//BinTreeCreateByStr(&bt, str, &i);
-	//BinTreeCreateByStr(&bt1, str1, &j);
+	BinTreeCreate(&bt);
+	BinTreeCreateByStr(&bt, str, &i);
+	BinTreeCreateByStr(&bt1, str1, &j);
 	BinTreeCreateBy_VLR_LVR(&bt, vlr, lvr, n);
-	//BinTreeCreateBy_LVR_LRV(&bt, lvr, lrv, n);
+	BinTreeCreateBy_LVR_LRV(&bt, lvr, lrv, n);
 
 	printf("VLR   :");
 	PreOrder(&bt);
@@ -84,7 +113,7 @@ int main()
 	printf("\n");
 	printf("\n");
 
-
+	
 	printf("Level:");
 	LevelOrder(&bt);
 	printf("\n");
@@ -98,6 +127,7 @@ int main()
 	bool flag = Equal(&bt, &bt1);
 	return 0;
 }
+
 
 int main()
 {

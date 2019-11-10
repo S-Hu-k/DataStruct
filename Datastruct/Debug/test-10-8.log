@@ -1,14 +1,13 @@
-﻿生成启动时间为 2019/11/8 19:41:03。
+﻿生成启动时间为 2019/11/10 16:00:23。
      1>项目“C:\Users\20961\Desktop\DataStruct\Datastruct\test-10-8.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt TestMain.c
          TestMain.c
-     1>c:\users\20961\desktop\datastruct\datastruct\heap.h(70): warning C4018: “<”: 有符号/无符号不匹配
-     1>c:\users\20961\desktop\datastruct\datastruct\heap.h(103): warning C4018: “<”: 有符号/无符号不匹配
-     1>c:\users\20961\desktop\datastruct\datastruct\heap.h(105): warning C4018: “<”: 有符号/无符号不匹配
-     1>c:\users\20961\desktop\datastruct\datastruct\heap.h(82): warning C4715: “HeapTop”: 不是所有的控件路径都返回值
-     1>c:\users\20961\desktop\datastruct\datastruct\heap.h(50): warning C4715: “HeapInsert”: 不是所有的控件路径都返回值
-     1>c:\users\20961\desktop\datastruct\datastruct\heap.h(98): warning C4715: “HeapRemove”: 不是所有的控件路径都返回值
+     1>c:\users\20961\desktop\datastruct\datastruct\bst.h(41): warning C4028: 形参 1 与声明不同
+     1>c:\users\20961\desktop\datastruct\datastruct\testmain.c(30): warning C4047: “函数”:“BSTree”与“BSTree *”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\testmain.c(30): warning C4024: “Sort”: 形参和实参 1 的类型不同
+     1>c:\users\20961\desktop\datastruct\datastruct\bst.h(39): warning C4715: “Insert”: 不是所有的控件路径都返回值
+     1>c:\users\20961\desktop\datastruct\datastruct\bst.h(89): warning C4715: “Remove”: 不是所有的控件路径都返回值
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.lib" /MACHINE:X86 Debug\TestMain.obj
          test-10-8.vcxproj -> C:\Users\20961\Desktop\DataStruct\Datastruct\Debug\test-10-8.exe
@@ -16,4 +15,4 @@
 
 生成成功。
 
-已用时间 00:00:01.74
+已用时间 00:00:00.61
