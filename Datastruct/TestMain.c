@@ -25,6 +25,7 @@ void main()
 int main()
 {
 	BSTree bst;
+
 	int j = 0;
 	int ar[] = { 45, 10,24, 53, 12, 38,30,21, 90 };
 	int n = sizeof(ar) / sizeof(int);

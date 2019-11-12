@@ -15,6 +15,8 @@ typedef struct SList
 }SList;
 SListNode* _Buynode(DataType x)
 {
+
+
 	SListNode *s = (SListNode*)malloc(sizeof(SListNode));//¹ºÂò¿Õ¼ä
 	//assert(s != NULL);
 	if (s == NULL)

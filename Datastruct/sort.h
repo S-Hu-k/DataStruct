@@ -101,6 +101,9 @@ void BinInsertSort(int *ar, int left, int right)
 	}
 }
 /*
+
+
+
 void PrintArray(int *ar, int left, int right)
 {
 	for (int i = left; i <= right; ++i)
