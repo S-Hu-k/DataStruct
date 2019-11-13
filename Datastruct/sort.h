@@ -121,6 +121,7 @@ void InsertSort(int *ar, int left, int right)
 			Swap(&ar[j], &ar[j - 1]);
 			j--;
 		}
+
 	}
 }
 ///////////////////////////////////////////
