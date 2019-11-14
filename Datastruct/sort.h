@@ -9,16 +9,18 @@ void PrintArray(int *ar, int left, int right)
 	}
 	printf("\n");
 }
-void TestSort(int *ar, int left, int right)
-{
-	/*TestSort(ar, left, right);
-	InsertSort_1(ar, left, right);
-	InsertSort_2(ar, left, right); */
-	BinInsertSort(ar, left, right);
+//void TestSort(int *ar, int left, int right)
+//{
+	//PrintArray(ar, left, right);
+	//InsertSort(ar, left, right);
+	
+//	PrintArray(ar, left, right);
+   // InsertSort_2(ar, left, right); 
+	//BinInsertSort(ar, left, right);
 
 
-	PrintArray(ar, left, right);
-}
+//	PrintArray(ar, left, right);
+//}
 
 
 //插入排序
@@ -48,6 +50,24 @@ void InsertSort_1(int *ar, int left, int right)
 		ar[j] = tmp;
 	}
 }
+void TestSortEfficiency()
+{
+	int n = 10000;
+	int *a = (int*)malloc(sizeof(int)*n);
+
+	srand(time(0));
+	for (int i = 0; i < n; ++i)
+	{
+		a[i] = rand();
+		
+	}
+
+	time_t start = clock();
+	InsertSort(a, 0, n - 1);
+	time_t end = clock();
+	printf("InsertSort: %u\n", end - start);
+
+}
 void InsertSort_2(int *ar, int left, int right)
 {
 	for (int i = left + 1; i <= right; ++i)
@@ -62,22 +82,7 @@ void InsertSort_2(int *ar, int left, int right)
 		ar[j] = ar[0];
 	}
 }
-void TestSortEfficiency()
-{
-	int n = 10000;
-	int *a = (int*)malloc(sizeof(int)*n);
-	srand(time(0));
-	for (int i = 0; i < n; ++i)
-	{
-		a[i] = rand();
-	}
-
-	time_t start = clock();
-	InsertSort(a, 0, n - 1);
-	time_t end = clock();
-	printf("InsertSort: %u\n", end - start);
-}
-void BinInsertSort(int *ar, int left, int right)
+void BinInsertSort(int *ar, int left, int right)//二分插入
 {
 	for (int i = left + 1; i <= right; ++i)
 	{
@@ -91,7 +96,7 @@ void BinInsertSort(int *ar, int left, int right)
 			if (ar[i] >= ar[mid])
 				low = mid + 1;
 			if (ar[i] < ar[mid])
-				high = mid - 1;			
+				high = mid - 1;
 		}
 		for (int j = i; j>low; --j)
 		{
@@ -100,10 +105,109 @@ void BinInsertSort(int *ar, int left, int right)
 		ar[low] = tmp;
 	}
 }
+void TowWayInsertSort(int *ar, int left, int right)//二路查找
+{
+	int n = right - left + 1;
+	int *tmp = (int*)malloc(sizeof(int));
+
+
+	int first, final;
+	tmp[0] = ar[left];
+	first = final = 0;
+
+	for (int i = left + 1; i <= right; ++i)
+	{
+		if (ar[i] < tmp[first])
+		{
+			first=(first-1+n)%n;
+			tmp[first] = ar[i];
+		}
+		else if (ar[i] > tmp[first])
+		{
+			tmp[++final] = ar[i];
+		}
+		else
+		{
+			int end = final;
+			while (ar[i] < tmp[end])
+			{
+				ar[(end + 1)%n] = tmp[end];
+				end = (end - 1 + n) % n;
+			}
+			tmp[(end + 1) % n] = ar[i];
+			final++;
+		}
+	}
+	int k = 0;
+	for (int i = first; k < n;)
+	{
+		ar[k++] = tmp[i];
+		i = (i + 1) % n;
+	}
+	free(tmp);
+	tmp = NULL;
+}
+
+//希尔排序  基本有序  直接插入
 /*
+int dlta[4] = { 5, 3, 2, 1 };
+void _ShellSort(int *ar, int left, int right, int gap)
+{
+	for (int i = left ; i <= right-gap; ++i)
+	{
+		//int end = i;
+		//int tmp = ar[end + gap];
+		//while (end>=left&&tmp < ar[end])
+		//{
+		//	ar[end + gap] = ar[end];
+		//	end -= gap;
+		//}
+		//ar[end + gap] = tmp;
 
-
-
+		if (ar[i + gap] < ar[i])
+		{
+			int end = i;
+			int tmp = ar[end + gap];
+			while (end >= left&&tmp < ar[end])
+			{
+				ar[end + gap] = ar[end];
+				end -= gap;
+			}
+			ar[end + gap] = tmp;
+		}
+	}
+}
+void ShellSort(int *ar, int left, int right)
+{
+	int n = sizeof(dlta) / sizeof(int);
+	for (int i = 0; i < n; ++i)
+	{
+		_ShellSort(ar, left, right, dlta[i]);
+	}
+}*/
+void ShellSort(int *ar, int left, int right)
+{
+	int gap = right - left + 1;
+	while (gap > 1)
+	{
+		gap = gap / 3 + 1;
+		for (int i = left; i <= right - gap; ++i)
+		{
+			if (ar[i + gap] < ar[i])
+			{
+				int end = i;
+				int tmp = ar[end + gap];
+				while (end >= left&&tmp < ar[end])
+				{
+					ar[end + gap] = ar[end];
+					end -= gap;
+				}
+				ar[end + gap] = tmp;
+			}
+		}
+	}
+}
+/*
 void PrintArray(int *ar, int left, int right)
 {
 	for (int i = left; i <= right; ++i)
@@ -130,25 +234,8 @@ void TestSort(int *ar, int left, int right)
 	TestSort(ar, left, right);
 	PrintArray(ar, left, right);
 }
-void TestSortEfficiency()
-{
-	int n = 10000;
-	int *a = (int*)malloc(sizeof(int)*n);
-	srand(time(0));
-	for (int i = 0; i < n; ++i)
-	{
-		a[i] = rand();
-	}
-	
-	time_t start = clock();
-	InsertSort(a, 0, n - 1);
-	time_t end = clock();
-	printf("InsertSort: %u\n", end - start);
-}
-//void TowWayInsertSort(int *ar, int left, int right)
-//{
-//	int left = 0;
-//}*/
+
+*/
 #endif/*_SORT_H_*/
 
 

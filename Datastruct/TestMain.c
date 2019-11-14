@@ -14,11 +14,16 @@
 //#include"bst.h"
 void main()
 {
-	int ar[] = { 0,49, 38, 65, 97, 76, 13, 27, 49 };
+    int ar[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
+	//int ar[] = { 9,1,2,5,7,4,8,6,3,5};
 	int n = sizeof(ar) / sizeof(int);
-	PrintArray(ar, 1, n-1);
-	TestSort(ar, 1,n-1);
+	PrintArray(ar, 0, n - 1);
+	ShellSort(ar, 0, n - 1);
+	PrintArray(ar, 0, n - 1);
 	TestSortEfficiency();
+	//printf("\n");
+	//InsertSort_1(ar1, 0, n - 1);
+	//TestSortEfficiency();
 	
 }
 /*
