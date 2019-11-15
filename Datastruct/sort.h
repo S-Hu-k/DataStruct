@@ -185,7 +185,7 @@ void ShellSort(int *ar, int left, int right)
 		_ShellSort(ar, left, right, dlta[i]);
 	}
 }*/
-void ShellSort(int *ar, int left, int right)
+void ShellSort(int *ar, int left, int right)//Ï£¶ûÅÅĞò
 {
 	int gap = right - left + 1;
 	while (gap > 1)
@@ -207,6 +207,10 @@ void ShellSort(int *ar, int left, int right)
 		}
 	}
 }
+
+//¿ìËÙÅÅĞò
+
+void 
 /*
 void PrintArray(int *ar, int left, int right)
 {
