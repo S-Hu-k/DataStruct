@@ -50,8 +50,13 @@ void SListDestroy(SList *plist);
 void SListSort(SList *plist);
 
 void SListreverse(SList *plist);
-
+bool SeqListIsEmpty(SList *psl);
 ///////////////////////////////////////////////////////
+bool SeqListIsEmpty(SList *psl)
+{
+	return psl->size == 0;
+}
+
 void SListInit(SList *plist)
 {
 	SListNode *s = _Buynode(0);
