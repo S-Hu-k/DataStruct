@@ -9,9 +9,17 @@
 //#include"stack.h"
 //#include"queue.h"
 //#include"bintree.h"
-#include"sort.h"
+//#include"sort.h"
 //#include"heap.h"
 //#include"bst.h"
+
+#include"hash.h"
+int main()
+{
+	HashTable ht;
+    ha
+}
+/*
 void main()
 {
    // int ar[] = { 49, 38, 65, 97, 76, 13, 27, 49 };
