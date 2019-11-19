@@ -17,7 +17,8 @@
 int main()
 {
 	HashTable ht;
-    ha
+    
+
 }
 /*
 void main()
