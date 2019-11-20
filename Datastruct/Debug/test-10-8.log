@@ -1,24 +1,15 @@
-﻿生成启动时间为 2019/11/19 22:54:52。
+﻿生成启动时间为 2019/11/20 17:23:14。
      1>项目“C:\Users\20961\Desktop\DataStruct\datastruct\test-10-8.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt TestMain.c
          TestMain.c
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(7): error C2016: C 要求一个结构或联合至少有一个成员
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(7): error C2061: 语法错误: 标识符“DataType”
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(9): error C2059: 语法错误:“}”
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(10): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(12): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(12): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(12): error C2059: 语法错误:“)”
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(15): error C2143: 语法错误 : 缺少“)”(在“*”的前面)
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(15): error C2143: 语法错误 : 缺少“{”(在“*”的前面)
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(15): error C2059: 语法错误:“)”
-     1>c:\users\20961\desktop\datastruct\datastruct\hash.h(16): error C2054: 在“pht”之后应输入“(”
-     1>c:\users\20961\desktop\datastruct\datastruct\testmain.c(19): error C2146: 语法错误: 缺少“;”(在标识符“ht”的前面)
-     1>c:\users\20961\desktop\datastruct\datastruct\testmain.c(19): error C2065: “ht”: 未声明的标识符
-     1>cl : 命令行 warning D9028: 最小重新生成失败，正在转换为标准生成
-     1>已完成生成项目“C:\Users\20961\Desktop\DataStruct\datastruct\test-10-8.vcxproj”(Build 个目标)的操作 - 失败。
+     1>c:\users\20961\desktop\datastruct\datastruct\hashtable.h(42): warning C4047: “=”:“int *”与“int”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\hashtable.h(66): warning C4047: “!=”:“int *”与“int”的间接级别不同
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\20961\Desktop\DataStruct\datastruct\Debug\test-10-8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\20961\Desktop\DataStruct\datastruct\Debug\test-10-8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\20961\Desktop\DataStruct\datastruct\Debug\test-10-8.lib" /MACHINE:X86 Debug\TestMain.obj
+         test-10-8.vcxproj -> C:\Users\20961\Desktop\DataStruct\datastruct\Debug\test-10-8.exe
+     1>已完成生成项目“C:\Users\20961\Desktop\DataStruct\datastruct\test-10-8.vcxproj”(Build 个目标)的操作。
 
-生成失败。
+生成成功。
 
-已用时间 00:00:01.22
+已用时间 00:00:00.57

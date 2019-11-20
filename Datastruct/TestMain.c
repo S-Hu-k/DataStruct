@@ -13,11 +13,23 @@
 //#include"heap.h"
 //#include"bst.h"
 
-#include"hash.h"
+#include"hashtable.h"
 int main()
 {
+	int ar[] = { 49, 38, 65, 97, 76, 13, 27 };
+	int n = sizeof(ar) / sizeof(int);
+
 	HashTable ht;
-    
+	HashTableInit(ht);
+
+	for (int i = 0; i < n; ++i)
+	{
+		HashTableInsert(ht, ar[i]);
+	}
+	HashTableShow(ht);
+	printf("====================================\n");
+	HashTableRemove(ht, 65);
+	HashTableShow(ht);
 
 }
 /*
