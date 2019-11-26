@@ -48,7 +48,7 @@ void Init_bucket_node()
 		{
 			hash_table[i].data[j] = NULL_DATA;
 		}
-		hash_table[i].next = NULL;
+		hash_table[i].next =0;
 	}
 }
 int insert_new_element(int new_element)
