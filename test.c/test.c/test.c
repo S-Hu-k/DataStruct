@@ -322,3 +322,5 @@ int main()
 }
 
 */
+
+#include¡¶stdio¡£¡¢
