@@ -1,10 +1,11 @@
-﻿生成启动时间为 2019/11/20 17:23:14。
+﻿生成启动时间为 2019/11/30 15:42:18。
      1>项目“C:\Users\20961\Desktop\DataStruct\datastruct\test-10-8.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt TestMain.c
          TestMain.c
-     1>c:\users\20961\desktop\datastruct\datastruct\hashtable.h(42): warning C4047: “=”:“int *”与“int”的间接级别不同
-     1>c:\users\20961\desktop\datastruct\datastruct\hashtable.h(66): warning C4047: “!=”:“int *”与“int”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\testmain.c(70): warning C4047: “!=”:“bucket_node *”与“int”的间接级别不同
+     1>c:\users\20961\desktop\datastruct\datastruct\testmain.c(83): warning C4013: “malloc”未定义；假设外部返回 int
+     1>c:\users\20961\desktop\datastruct\datastruct\testmain.c(88): warning C4047: “=”:“bucket_node *”与“int”的间接级别不同
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\20961\Desktop\DataStruct\datastruct\Debug\test-10-8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\20961\Desktop\DataStruct\datastruct\Debug\test-10-8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\20961\Desktop\DataStruct\datastruct\Debug\test-10-8.lib" /MACHINE:X86 Debug\TestMain.obj
          test-10-8.vcxproj -> C:\Users\20961\Desktop\DataStruct\datastruct\Debug\test-10-8.exe
@@ -12,4 +13,4 @@
 
 生成成功。
 
-已用时间 00:00:00.57
+已用时间 00:00:00.73

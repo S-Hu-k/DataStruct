@@ -40,6 +40,10 @@ struct bucket_node hash_table[P];
 //insert_new_element()函数目的是把一个新的值插入hash_table中，
 //元素插入成功时，函数返回0，否则返回-1，完成函数。
 
+int Hash(int key)
+{
+	return key%P;
+}
 void Init_bucket_node()
 {
 	for (int i = 0; i < P; ++i)
@@ -53,6 +57,38 @@ void Init_bucket_node()
 }
 int insert_new_element(int new_element)
 {
+	int index = Hash(new_element);
+	for (int i = 0; i < 3; ++i)
+	{
+		if (hash_table[index].data[i] == NULL_DATA)
+		{
+			hash_table[index].data[i] = new_element;
+			return 0;
+		}
+	}
+	struct bucket_node *p = &hash_table[index];
+	while(p->next != NULL_DATA)
+	{
+		p = p->next;
+		for (int i = 0; i < 3; ++i)
+		{
+			if (p->data[i] == NULL_DATA)
+			{
+				p->data[i] = new_element;
+				return 0;
+			}
+		}
+		
+	}
+	struct bucket_node *s = (struct bucket_node*)malloc(sizeof(struct bucket_node));
+	for (int i = 0; i < 3; ++i)
+	{
+		s->data[i] = NULL_DATA;
+	}
+	s->next = NULL_DATA;
+	s->data[0] = new_element;
+	p->next = s;
+
 	return 0;
 }
 /////////////////////////////
@@ -60,7 +96,11 @@ int main()
 {
 	Init_bucket_node();
 	int array[] = { 15, 14, 21, 87, 96, 293, 35, 24, 149, 19, 63, 16, 103, 77, 5, 153, 145, 356, 51, 68, 705, 453 };
-	for ()
+	for (int i = 0; i < sizeof(array) / sizeof(int); i++)
+	{
+		insert_new_element(array[i]);
+	}
+	return 0;
 
 }
 
